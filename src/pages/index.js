@@ -30,6 +30,11 @@ const IndexPage = () => (
       </div>
     </div>
     
+    <div className="row mb-3">
+      <div className="col-12">
+        <h2>Where do we operate?</h2>
+      </div>
+    </div>
     <Map />
 
     <div className="row my-5">
