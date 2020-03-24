@@ -20,10 +20,30 @@ const Header = () => (
         <li className="nav-item">
           <Link
             className="nav-link"
-            to="/contact"
+            to="/volunteer"
             activeClassName="active"
             >
-            Contact us
+            Volunteer
+          </Link>
+        </li>
+        
+        <li className="nav-item">
+          <Link
+            className="nav-link"
+            to="/help"
+            activeClassName="active"
+            >
+            Get help
+          </Link>
+        </li>
+        
+        <li className="nav-item">
+          <Link
+            className="nav-link"
+            to="/health"
+            activeClassName="active"
+            >
+            Health & safety
           </Link>
         </li>
 

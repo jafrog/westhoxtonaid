@@ -1,4 +1,8 @@
 import React from "react"
+import {
+  Row,
+  Col
+} from "react-bootstrap"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -7,34 +11,32 @@ import Map from "../components/map"
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <div className="row my-5">
-      <div className="col-12">
-        <h1>West Hoxton mutual aid</h1>
-      </div>
-    </div>
-
-    <div className="row my-5">
-      <div className="col-12">
-        <p className="lead">Are you self-isolating or know someone who is? You are not alone!</p>
-        <p className="mb-5">
-          Hoston West Mutual Aid group will try to help you.
-        </p>
-
-        <p>
-          Are you unable or afraid to leave your home due to coronavirus? Do you need someone to run errands, do shopping, walk your dog, or just someone to talk to?
-        </p>
-
-        <p>
-          We are a group of local residents getting together to  support each other at this time. We are offerring this help completely free.
-        </p>
-      </div>
-    </div>
     
-    <div className="row mb-3">
-      <div className="col-12">
-        <h2>Where do we operate?</h2>
-      </div>
-    </div>
+    <Row>
+      <h1 className="display-3">West Hoxton Mutual Aid</h1>
+    </Row>
+
+    <Row className="mb-5">
+      <Col>
+      <p className="lead">Are you self-isolating or know someone who is? You are not alone!</p>
+      
+      <p className="mb-3">
+        Hoston West Mutual Aid group will try to help you.
+      </p>
+
+      <p>
+        Are you unable or afraid to leave your home due to coronavirus? Do you need someone to run errands, do shopping, walk your dog, or just someone to talk to?
+      </p>
+
+      <p>
+        We are a group of local residents getting together to  support each other at this time. We are offerring this help completely free.
+      </p>
+      </Col>
+    </Row>
+    
+    <Row>
+      <h2>Where do we operate?</h2>
+    </Row>
     <Map />
 
     <div className="row my-5">

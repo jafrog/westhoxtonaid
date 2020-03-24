@@ -1,5 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
+import Helmet from "react-helmet"
 
 import Header from "./header"
 
@@ -8,6 +9,9 @@ import '../styles/global.scss'
 const Layout = ({ children }) => {
   return (
     <>
+      <Helmet>
+        <link href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap" rel="stylesheet" />
+      </Helmet>
       <Header/>
       <main>
         <div className="container">

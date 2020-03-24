@@ -2,7 +2,6 @@ import React from "react"
 import { 
   Row,
   Col,
-  Accordion,
   Button 
 } from "react-bootstrap"
 import { useStaticQuery, graphql } from "gatsby"
@@ -11,7 +10,7 @@ import Img from "gatsby-image"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-const ContactPage = () => {
+const VolunteerPage = () => {
   const data = useStaticQuery(graphql`
     query {
       mapImage: file(relativePath: { eq: "hoxtonwestmap.png" }) {
@@ -26,24 +25,13 @@ const ContactPage = () => {
   
   return (
     <Layout>
-      <SEO title="Contact" />
+      <SEO title="Volunteer" />
       
       <Row>
-        <Col xs={12}>
-          <Accordion
-            id="sections"
-            className="mb-5"
-            >
-              <Row>
-                <Col xs="12">
-                  <Accordion.Toggle as={Button} variant="link" eventKey="0">
-                    <h1 className="mb-3">
-                      I want to volunteer
-                    </h1>
-                  </Accordion.Toggle>
+        <h1 className="display-3">I want to volunteer</h1>
+      </Row>
                   
-                  <Accordion.Collapse eventKey="0">
-                    <Row className="mb-5">
+      <Row className="mb-5">
                       <Col xs={12}>
                         <Row>
                           <Col xs={12}>
@@ -178,63 +166,8 @@ const ContactPage = () => {
                       </Row>
                     </Col>
                   </Row>
-                </Accordion.Collapse>
-              </Col>
-            </Row>
-            
-            <Row>
-              <Col xs="12">
-                <Accordion.Toggle as={Button} variant="link" eventKey="1">
-                  <h1>
-                    I need help
-                  </h1>
-                </Accordion.Toggle>
-                
-                <Accordion.Collapse eventKey="1">
-                  <Row>
-                    <Col>
-                      <p className="lead">Please put your request for help by clicking on the below link and then entering your details and request.</p>
-                      <p>We will then put you in touch with somebody who can help</p>
-                      <div className="d-flex justify-content-center">
-                        <Button href="https://forms.gle/AmbJRrdN4QJVcPVGA">
-                          Assistance request form
-                        </Button>
-                    </div>
-                    <p className="lead">Alternatively, you can get in touch via email or phone</p>
-                    
-                    <div className="row my-5">
-                      <div className="col-12">
-                        <div className="card-deck justify-content-between">
-                          <div className="card col-12 col-sm-5 text-center p-3">
-                            <div className="card-body">
-                              <p className="card-title">Call or text</p>
-                              <h5><a href="tel:07538 829 692">07538 829 692</a></h5>
-                            </div>
-                          </div>
-
-                          <div className="card col-12 col-sm-5 text-center p-3">
-                            <div className="card-body">
-                              <p className="card-title">Email</p>
-                              <h5>
-                                <a href="mailto:hoxtonwestmutualaid@gmail.com">
-                                  hoxtonwestmutualaid@gmail.com
-                                </a>
-                              </h5>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    </Col>
-                  </Row>
-                </Accordion.Collapse>
-              </Col>
-            </Row>
-          </Accordion>
-        </Col>
-      </Row>
     </Layout>
   )
   }
   
-  export default ContactPage
+  export default VolunteerPage
