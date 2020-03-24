@@ -3,6 +3,11 @@ module.exports = {
     title: `West Hoxton Mutual Aid`,
     description: `A website for the West Hoxton Mutual Aid volunteer group`,
     author: `@jafrog`,
+    credentials: {
+      mapboxgl: {
+        accessToken: "pk.eyJ1IjoiamFmcm9nIiwiYSI6ImNrODVycjFidjA5YXYzZm90bGlhb3NtZGIifQ.SQAaDJZO5xzVJsMMRlYMTw"
+      }
+    },
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
