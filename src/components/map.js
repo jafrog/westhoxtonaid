@@ -16,6 +16,10 @@ class Map extends React.Component {
   renderMap = (ref) => {
     mapboxgl.accessToken = this.props.data.site.siteMetadata.credentials.mapboxgl.accessToken
     
+    if (ref == null) {
+      return
+    }
+    
     const map = new mapboxgl.Map({
       container: ref,
       style: 'mapbox://styles/mapbox/streets-v11',
