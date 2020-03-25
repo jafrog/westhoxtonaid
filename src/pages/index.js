@@ -1,8 +1,10 @@
 import React from "react"
 import {
   Row,
-  Col
+  Col,
+  Button
 } from "react-bootstrap"
+import { FaEnvelope, FaPhone } from 'react-icons/fa'
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -35,33 +37,37 @@ const IndexPage = () => (
     </Row>
     
     <Row>
-      <h2>Where do we operate?</h2>
+      <Col xs={12}>
+        <h2>Where do we operate?</h2>
+      </Col>
     </Row>
     <Map />
-
-    <div className="row my-5">
-      <div className="col-12">
-        <div className="card-deck justify-content-between">
-          <div className="card col-12 col-sm-5 text-center p-3">
-            <div className="card-body">
-              <p className="card-title">Call or text</p>
-              <h5><a href="tel:07538 829 692">07538 829 692</a></h5>
-            </div>
-          </div>
-
-          <div className="card col-12 col-sm-5 text-center p-3">
-            <div className="card-body">
-              <p className="card-title">Email</p>
-              <h5>
-                <a href="mailto:hoxtonwestmutualaid@gmail.com">
-                  hoxtonwestmutualaid@gmail.com
-                </a>
-              </h5>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    
+    <Row className="mt-5">
+      <Col xs={12}>
+        <h2>Get in touch</h2>
+      </Col>
+    </Row>
+    <Row className="mb-5">
+      <Col xs={12} className="mb-3 d-flex align-items-center justify-content-center">
+        <Button
+          href="tel:07538 829 692"
+          variant="secondary"
+          className="d-flex align-items-center mx-3"
+          >
+            <FaPhone className="mr-1"/>
+            Call or text
+        </Button>
+        <Button
+          href="mailto:hoxtonwestmutualaid@gmail.com"
+          variant="secondary"
+          className="d-flex align-items-center"
+          >
+            <FaEnvelope className="mr-1"/>
+            Email
+        </Button>
+      </Col>
+    </Row>
 
     <div className="row my-5">
       <div className="col-12">

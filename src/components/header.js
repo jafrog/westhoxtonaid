@@ -50,16 +50,6 @@ const Header = () => (
         <li className="nav-item">
           <Link
             className="nav-link"
-            to="/about"
-            activeClassName="active"
-            >
-            About us
-          </Link>
-        </li>
-
-        <li className="nav-item">
-          <Link
-            className="nav-link"
             to="/resources"
             activeClassName="active"
             >
