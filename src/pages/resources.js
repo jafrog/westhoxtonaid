@@ -1,12 +1,11 @@
 import React from "react"
 import {
   Row,
-  Col,
 } from "react-bootstrap"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import ResourceCard from "../components/resourceCard"
+import ResourceCards from "../components/resourceCards"
 
 const supportResources = [
   {
@@ -209,14 +208,6 @@ const migrants = [
   },
 ]
 
-Array.prototype.eachSlice = function (size){
-  this.arr = []
-  for (var i = 0, l = this.length; i < l; i += size){
-    this.arr.push(this.slice(i, i + size))
-  }
-  return this.arr
-}
-
 const ResourcesPage = () => (
   <Layout>
     <SEO title="Resources" />
@@ -225,39 +216,19 @@ const ResourcesPage = () => (
       <h1>Support services</h1>
     </Row>
     
-    {supportResources.eachSlice(3).map((slice, index) => (
-      <Row key={index}>
-        {slice.map((link, index) => (
-          <Col xs={12} sm={6} md={4} key={index+100} className="mb-5">
-            <ResourceCard
-              title={link.title}
-              text={link.text}
-              website={link.website}
-              phone={link.phone}
-            />
-          </Col>
-        ))}
-      </Row>
-    ))}
+    <ResourceCards 
+      resources={supportResources}
+      perRow={3}
+    />
       
       <Row>
         <h1>Emergency food</h1>
       </Row>
       
-      {emergencyFood.eachSlice(3).map((slice, index) => (
-        <Row key={index}>
-          {slice.map((link, index) => (
-            <Col xs={12} sm={6} md={4} key={index+100} className="mb-5">
-              <ResourceCard
-                title={link.title}
-                text={link.text}
-                website={link.website}
-                phone={link.phone}
-              />
-            </Col>
-          ))}
-        </Row>
-      ))}
+      <ResourceCards 
+        resources={emergencyFood}
+        perRow={3}
+      />
   
       <Row>
         <h1>Mental health</h1>
@@ -267,77 +238,37 @@ const ResourcesPage = () => (
         <p>All resources include access to urgent helplines and non-urgent contacts (online chat, email, phone..)</p>
       </Row>
       
-      {mentalHealth.eachSlice(3).map((slice, index) => (
-        <Row key={index}>
-          {slice.map((link, index) => (
-            <Col xs={12} sm={6} md={4} key={index+100} className="mb-5">
-              <ResourceCard
-                title={link.title}
-                text={link.text}
-                website={link.website}
-                phone={link.phone}
-              />
-            </Col>
-          ))}
-        </Row>
-      ))}
+      <ResourceCards 
+        resources={mentalHealth}
+        perRow={3}
+      />
 
       <Row>
         <h1>Housing</h1>
       </Row>
       
-      {housing.eachSlice(3).map((slice, index) => (
-        <Row key={index}>
-          {slice.map((link, index) => (
-            <Col xs={12} sm={6} md={4} key={index+100} className="mb-5">
-              <ResourceCard
-                title={link.title}
-                text={link.text}
-                website={link.website}
-                phone={link.phone}
-              />
-            </Col>
-          ))}
-        </Row>
-      ))} 
+      <ResourceCards 
+        resources={housing}
+        perRow={3}
+      /> 
       
       <Row>
         <h1>Work</h1>
       </Row>
       
-      {work.eachSlice(3).map((slice, index) => (
-        <Row key={index}>
-          {slice.map((link, index) => (
-            <Col xs={12} sm={6} md={4} key={index+100} className="mb-5">
-              <ResourceCard
-                title={link.title}
-                text={link.text}
-                website={link.website}
-                phone={link.phone}
-              />
-            </Col>
-          ))}
-        </Row>
-      ))}
+      <ResourceCards 
+        resources={work}
+        perRow={3}
+      />
       
       <Row>
         <h1>Benefits</h1>
       </Row>
       
-      {benefits.eachSlice(3).map((slice, index) => (
-        <Row key={index}>
-          {slice.map((link, index) => (
-            <Col xs={12} sm={6} md={4} key={index+100} className="mb-5">
-              <ResourceCard
-                title={link.title}
-                text={link.text}
-                website={link.website}
-                phone={link.phone}
-              />
-            </Col>
-          ))}
-        </Row>
-      ))} 
+      <ResourceCards 
+        resources={benefits}
+        perRow={3}
+      /> 
       
       <Row>
         <h1>Migrants</h1>
@@ -349,20 +280,10 @@ const ResourcesPage = () => (
         </p>
       </Row>
       
-      {migrants.eachSlice(3).map((slice, index) => (
-        <Row key={index}>
-          {slice.map((link, index) => (
-            <Col xs={12} sm={6} md={4} key={index+100} className="mb-5">
-              <ResourceCard
-                title={link.title}
-                text={link.text}
-                website={link.website}
-                phone={link.phone}
-              />
-            </Col>
-          ))}
-        </Row>
-      ))}
+      <ResourceCards 
+        resources={migrants}
+        perRow={3}
+      />
       
       <Row>
         <h1>Domestic violence</h1>

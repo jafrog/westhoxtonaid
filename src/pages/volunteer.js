@@ -18,7 +18,7 @@ import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import ResourceCard from "../components/resourceCard"
+import ResourceCards from "../components/resourceCards"
 
 const areaWhatsapps = [
   {
@@ -85,14 +85,6 @@ const resources = [
     website: "https://daretocarepackages.com/"
   },
 ]
-
-Array.prototype.eachSlice = function (size){
-  this.arr = []
-  for (var i = 0, l = this.length; i < l; i += size){
-    this.arr.push(this.slice(i, i + size))
-  }
-  return this.arr
-}
 
 const VolunteerPage = () => {
   const data = useStaticQuery(graphql`
@@ -256,20 +248,7 @@ const VolunteerPage = () => {
           
           <Row>
             <Col xs={12}>
-              {resources.eachSlice(3).map((slice, index) => (
-                <Row key={index}>
-                  {slice.map((link, index) => (
-                    <Col xs={12} md={4} key={index} className="mb-3">
-                      <ResourceCard
-                        title={link.title}
-                        text={link.text}
-                        website={link.website}
-                        phone={link.phone}
-                      />
-                    </Col>
-                  ))}
-                </Row>
-              ))}
+              <ResourceCards resources={resources} perRow={3}/>
             </Col>
           </Row>
         </Col>
