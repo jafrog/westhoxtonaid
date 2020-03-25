@@ -13,7 +13,7 @@ const Layout = ({ children }) => {
         <link href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap" rel="stylesheet" />
       </Helmet>
       <Header/>
-      <main>
+      <main style={{ minHeight: "100vh" }}>
         <div className="container">
           {children}
         </div>

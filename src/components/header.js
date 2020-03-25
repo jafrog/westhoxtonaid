@@ -56,6 +56,26 @@ const Header = () => (
             Resources
           </Link>
         </li>
+        
+        <li className="nav-item">
+          <Link
+            className="nav-link"
+            to="/contact"
+            activeClassName="active"
+            >
+            Contact us
+          </Link>
+        </li>
+        
+        <li className="nav-item">
+          <Link
+            className="nav-link"
+            to="/about"
+            activeClassName="active"
+            >
+            About us
+          </Link>
+        </li>
       </ul>
     </nav>
   </header>

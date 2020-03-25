@@ -66,7 +66,7 @@ const areaWhatsapps = [
 const resources = [
   {
     title: "Hackney foodbank",
-    text: "Donate goods to Florence Bennett Centre, Cherbury St, N1 6TL between 9am-12pm Mon-Thu. Or sign-up to a volunteer shift via the link below",
+    text: "Needs donation of supplies urgently! Donate goods to Florence Bennett Centre, Cherbury St, N1 6TL between 9am-12pm Mon-Thu. Or sign-up to a volunteer shift via the link below",
     website: "https://hackneyfoodbank.simplybook.it/v2/#book/count/1/"
   },
   {
@@ -124,6 +124,7 @@ const VolunteerPage = () => {
                 <p>
                   <Button
                     href="https://forms.gle/yMZGT5m2irvLpnxe7"
+                    target="_blank" 
                     className="d-flex align-items-center btn-lg btn-primary w-100">
                     <FaClipboard className="mr-1" />
                     Register to volunteer
@@ -143,6 +144,7 @@ const VolunteerPage = () => {
                 href="https://www.facebook.com/groups/791760537983496/"
                 variant="secondary"
                 className="d-flex align-items-center mx-3"
+                target="_blank" 
                 >
                   <FaFacebookSquare className="mr-1"/>
                   Facebook
@@ -151,6 +153,7 @@ const VolunteerPage = () => {
                 href="https://chat.whatsapp.com/ExfTKM1Cpdz9V9o9nWRDnX"
                 variant="secondary"
                 className="d-flex align-items-center"
+                target="_blank" 
                 >
                   <FaWhatsappSquare className="mr-1"/>
                   Whatsapp
@@ -174,6 +177,7 @@ const VolunteerPage = () => {
                         variant="outline-secondary"
                         href={link.href}
                         className="d-flex align-items-center justify-content-center mb-3"
+                        target="_blank" 
                         key={index}
                         >
                         <FaWhatsapp className="mr-1"/>
@@ -208,6 +212,7 @@ const VolunteerPage = () => {
                 <li>
                   <Button
                     variant="link"
+                    target="_blank" 
                     href="https://queercare.network/our-work/resources/covid-19/delivering-items-to-someone-in-self-isolation-protocol/">
                     Delivering items to someone in self isolation protocol
                   </Button>
@@ -215,6 +220,7 @@ const VolunteerPage = () => {
                 <li>
                   <Button
                     variant="link"
+                    target="_blank" 
                     href="https://wiki.queercare.network/index.php?title=Principles_and_assumptions_for_doing_support_work_in_the_covid-19_pandemic">
                     Principles and assumptions for doing support work in the covid-19 pandemic
                   </Button>
@@ -233,6 +239,7 @@ const VolunteerPage = () => {
                 <a
                   href="https://drive.google.com/drive/folders/1q4ahDnigbdv-G0J83JuftwQ7e_iCpSSs"
                   className="ml-1"
+                  target="_blank" 
                 >
                   Google Share drive
                 </a>.

@@ -47,7 +47,7 @@ const supportResources = [
   
   {
     title: "Praxis",
-    text: "Practical, legal and emotional support for migrants. Over-the-phone support",
+    text: "Practical, legal and emotional support for migrants and refugees. Over-the-phone support",
     website: "https://www.praxis.org.uk/",
   },
   
@@ -192,7 +192,12 @@ const migrants = [
   {
     title: "Migrants Organise, Medact & Joint Council for Welfare of Immigrants",
     text: "Guide covering access to healthcare, translation, protection against hostile environment",
-    website: "https://tinyurl.com/migrantmutualaid & cards https://tinyurl.com/nhsCOVIDinfocard ",
+    website: "https://tinyurl.com/migrantmutualaid",
+  },
+  
+  {
+    title: "COVID-19 info cards",
+    website: "https://tinyurl.com/nhsCOVIDinfocard ",
   },
   
   {
@@ -213,7 +218,7 @@ const ResourcesPage = () => (
     <SEO title="Resources" />
     
     <Row>
-      <h1>Support services</h1>
+      <h1 className="display-4">Support services</h1>
     </Row>
     
     <ResourceCards 
