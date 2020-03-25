@@ -4,6 +4,7 @@ import {
   Col,
   Button
 } from "react-bootstrap"
+import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -46,8 +47,8 @@ const IndexPage = () => (
       <p>
         We are Hoxton West Mutual Aid, a group of local residents operating in the Hoxton West ward of Hackney, 
         and we are here to support you at this time. We offer our help completely free. 
-        You can read more about us and our set-up here. Please note that all our volunteers are asked to follow strict 
-        hygiene and safeguarding protocols when volunteering, which you can find out more about here.
+        You can read more about us and our set-up <Link to="/about">here</Link>. Please note that all our volunteers are asked to follow strict 
+        hygiene and safeguarding protocols when volunteering, which you can find out more about <Link to="/health">here</Link>.
       </p>
 
       <p>
