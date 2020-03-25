@@ -2,7 +2,8 @@ import React from "react"
 import { 
   Row,
   Col,
-  Button 
+  Button,
+  Alert
 } from "react-bootstrap"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
@@ -11,10 +12,13 @@ import {
   FaFacebookSquare,
   FaWhatsappSquare,
   FaWhatsapp,
+  FaExclamationTriangle,
 } from "react-icons/fa"
+import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import ResourceCard from "../components/resourceCard"
 
 const areaWhatsapps = [
   {
@@ -56,6 +60,29 @@ const areaWhatsapps = [
   {
     href: "https://chat.whatsapp.com/I2MQD9NcERdGSAolmKrrA5",
     area: "Area J",
+  },
+]
+
+const resources = [
+  {
+    title: "Hackney foodbank",
+    text: "Donate goods to Florence Bennett Centre, Cherbury St, N1 6TL between 9am-12pm Mon-Thu. Or sign-up to a volunteer shift via the link below",
+    website: "https://hackneyfoodbank.simplybook.it/v2/#book/count/1/"
+  },
+  {
+    title: "Made in Hackney",
+    text: "Donate towards their crowdfunder to supply vulnerable community members with free food delivered to their door",
+    website: "https://www.crowdfunder.co.uk/made-in-hackney-4"
+  },
+  {
+    title: "Good Gym",
+    text: "Organisation that helps those in need, providing social and practical support to those isolated. Still taking on new volunteers, sign-up via the link",
+    website: "https://www.goodgym.org"
+  },
+  {
+    title: "Dare to Care Packages",
+    text: "Donate items that will be used to make up care packages or volunteer to help with their logisitics",
+    website: "https://daretocarepackages.com/"
   },
 ]
 
@@ -114,7 +141,7 @@ const VolunteerPage = () => {
           </Row>
           
           <Row>
-            <Col xs={12} sm={8}>
+            <Col xs={12}>
               <h2>Keep up-to-date via social media</h2>
             </Col>
           </Row>
@@ -167,18 +194,23 @@ const VolunteerPage = () => {
             </Col>
           </Row>
           
-          <Row>
+          <Row className="mb-5">
             <Col xs={12}>
               <h2 className="mb-3">Completing assistance requests</h2>
               
               <p>
                 In line with the government guidelines of minimising your time outdoors, please only run assistance requests in conjunction with your own errands or exercise time.
               </p>
-              <p className="lead">
-                For errands please make sure you are following the safety advice: 
-              </p>
+              <Alert variant="warning" className="d-flex align-items-center">
+                <FaExclamationTriangle style={{
+                  width: "2rem",
+                  fontSize: "1.25rem",
+                }} className="mr-3" />
+                For errands please make sure you are following the  
+                <Link to="/health" className="ml-1"> safety advice </Link>
+              </Alert>
               <p>
-                Please read the following links as a guide of best practice.
+                Please read the following links as a guide of best practice:
               </p>
               <ul>
                 <li>
@@ -206,33 +238,38 @@ const VolunteerPage = () => {
               
               <p>
                 More information on health and safety, safeguarding and further advice can be found on our 
-                <Button variant="link" href="https://drive.google.com/drive/folders/1q4ahDnigbdv-G0J83JuftwQ7e_iCpSSs">Google Share drive</Button>
+                <a
+                  href="https://drive.google.com/drive/folders/1q4ahDnigbdv-G0J83JuftwQ7e_iCpSSs"
+                  className="ml-1"
+                >
+                  Google Share drive
+                </a>.
               </p>
             </Col>
           </Row>
           
           <Row>
-            <Col>
-              <h2 className="mb-3">Other ways you can help</h2>
-              <ul>
-                <li>
-                  Hackney foodbank: Donate goods to Florence Bennett Centre, Cherbury St, N1 6TL between 9am-12pm Mon-Thu. 
-                  Or sign-up to a volunteer shift via this link: <a href="https://hackneyfoodbank.simplybook.it/v2/#book/count/1/">https://hackneyfoodbank.simplybook.it/v2/#book/count/1/</a>
-                </li>
-                <li>
-                  Made in Hackney: Donate towards their crowdfunder to supply vulnerable community members with free food delivered to their door
-                  <a href="https://www.crowdfunder.co.uk/made-in-hackney-4">https://www.crowdfunder.co.uk/made-in-hackney-4</a>
-                </li>
-                <li>
-                  Good Gym: Organisation that helps those in need, providing social and practical support to those isolated. 
-                  Still taking on new volunteers, sign-up via the link
-                  <a href="https://www.goodgym.org/">https://www.goodgym.org/</a>
-                </li>
-                <li>
-                  Dare to Care Packages: Donate items that will be used to make up care packages or volunteer to help with their logisitics
-                  <a href="https://daretocarepackages.com/">https://daretocarepackages.com/</a>
-                </li>
-              </ul>
+            <Col xs={12}>
+              <h2>Other ways to help</h2>
+            </Col>
+          </Row>
+          
+          <Row>
+            <Col xs={12}>
+              {resources.eachSlice(3).map((slice, index) => (
+                <Row key={index}>
+                  {slice.map((link, index) => (
+                    <Col xs={12} md={4} key={index} className="mb-3">
+                      <ResourceCard
+                        title={link.title}
+                        text={link.text}
+                        website={link.website}
+                        phone={link.phone}
+                      />
+                    </Col>
+                  ))}
+                </Row>
+              ))}
             </Col>
           </Row>
         </Col>
