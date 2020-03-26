@@ -50,7 +50,7 @@ const IndexPage = () => {
         <Col xs={12} className="mb-3 d-flex align-items-center justify-content-around">
           <Button
             href="/volunteer"
-            className="d-flex align-items-center mx-3 btn-lg btn-secondary px-4 py-3 btn-dark"
+            className="d-flex align-items-center mx-3 btn-lg btn-secondary px-4 py-3 btn-light"
             >
               <FaClipboard className="mr-2"/>
               Offer support
