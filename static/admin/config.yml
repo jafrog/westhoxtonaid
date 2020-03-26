@@ -1,0 +1,14 @@
+backend:
+  name: test-repo
+  
+media_folder: static/assets
+public_folder: /assets
+collections:
+  - name: content
+    label: Content Sections
+    folder: content
+    create: true
+    fields:
+      - { name: page, label: Page, widget: select, options: ["Home", "Volunteer", "Get help", "Health & Safety", "Resources", "Contact us", "About us"] }
+      - { name: title, label: Title }
+      - { name: body, label: Body, widget: markdown }
