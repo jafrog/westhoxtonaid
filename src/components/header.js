@@ -53,7 +53,7 @@ const Header = () => (
             to="/resources"
             activeClassName="active"
             >
-            Resources
+            More support
           </Link>
         </li>
         

@@ -18,6 +18,25 @@ body {
   font-size: 20px;
 }
 
-.display-3 {
+.title {
   color: $red;
+}
+
+.heart-emoji {
+  font-size: 3.25rem;
+}
+
+.contact-card {
+  min-width: 350px;
+  width: 400px;
+}
+
+.contact-link {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.contact-card-title {
+  font-size: 1rem;
+  font-weight: 300;
 }

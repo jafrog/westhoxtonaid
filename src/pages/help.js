@@ -12,6 +12,7 @@ import {
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Contact from "../components/contact"
 
 const HelpPage = () => {
   return (
@@ -51,32 +52,14 @@ const HelpPage = () => {
               </Row>
             </Col>
           </Row>
-      
+          
           <Row>
-            <Col xs={12}>
+            <Col>
               <h2>Get in touch</h2>
             </Col>
           </Row>
-          <Row className="mb-5">
-            <Col xs={12} className="mb-3 d-flex align-items-center justify-content-center">
-              <Button
-                href="tel:07538 829 692"
-                variant="secondary"
-                className="d-flex align-items-center mx-3"
-                >
-                  <FaPhone className="mr-1"/>
-                  Call or text
-              </Button>
-              <Button
-                href="mailto:hoxtonwestmutualaid@gmail.com"
-                variant="secondary"
-                className="d-flex align-items-center"
-                >
-                  <FaEnvelope className="mr-1"/>
-                  Email
-              </Button>
-            </Col>
-          </Row>
+      
+          <Contact />
         </Col>
       </Row>
     </Layout>

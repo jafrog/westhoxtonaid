@@ -31,7 +31,7 @@ const HealthPage = () => (
           </Col>
         </Row>
         
-        <ResourceCards resources={resources} perRow={3}/>
+        <p>Coming soon...</p>
         
       </Col>
     </Row>

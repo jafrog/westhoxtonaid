@@ -96,8 +96,13 @@ const VolunteerPage = () => {
           }
         }
       }
-    }
-    `)
+      allFile(filter: { name: { eq: "flyers" } }) {
+          nodes {
+            publicURL
+          }
+        }
+      }
+  `)
     
     return (
       <Layout>
@@ -119,6 +124,9 @@ const VolunteerPage = () => {
                 <p>
                   By registering your details as a volunteer will help us to match any requests that come through and identify areas that may need extra support.
                 </p>
+                <p>
+                  To download our leaflets click <a target="_blank" rel="noopener noreferrer" href={data.allFile.nodes[0]["publicURL"]}>here</a>.
+                </p>
               </Col>
               <Col xs={12} sm={4} className="d-flex justify-content-center align-items-center mb-3">
                 <p>
@@ -130,6 +138,24 @@ const VolunteerPage = () => {
                     Register to volunteer
                   </Button>
                 </p>
+            </Col>
+          </Row>
+          
+          <Row className="mb-5">
+            <Col xs={12}>
+              <h2 className="mb-3">Completing assistance requests</h2>
+              
+              <p>
+                In line with the government guidelines of minimising your time outdoors, please only run assistance requests in conjunction with your own errands or exercise time.
+              </p>
+              <Alert variant="warning" className="d-flex align-items-center">
+                <FaExclamationTriangle style={{
+                  width: "2rem",
+                  fontSize: "1.25rem",
+                }} className="mr-3" />
+                For errands please make sure you are following the  
+                <Link to="/health" className="ml-1"> safety advice </Link>
+              </Alert>
             </Col>
           </Row>
           
@@ -187,63 +213,6 @@ const VolunteerPage = () => {
                   </Col>
                 ))}
               </Row>
-            </Col>
-          </Row>
-          
-          <Row className="mb-5">
-            <Col xs={12}>
-              <h2 className="mb-3">Completing assistance requests</h2>
-              
-              <p>
-                In line with the government guidelines of minimising your time outdoors, please only run assistance requests in conjunction with your own errands or exercise time.
-              </p>
-              <Alert variant="warning" className="d-flex align-items-center">
-                <FaExclamationTriangle style={{
-                  width: "2rem",
-                  fontSize: "1.25rem",
-                }} className="mr-3" />
-                For errands please make sure you are following the  
-                <Link to="/health" className="ml-1"> safety advice </Link>
-              </Alert>
-              <p>
-                Please read the following links as a guide of best practice:
-              </p>
-              <ul>
-                <li>
-                  <Button
-                    variant="link"
-                    target="_blank" rel="noopener noreferrer" 
-                    href="https://queercare.network/our-work/resources/covid-19/delivering-items-to-someone-in-self-isolation-protocol/">
-                    Delivering items to someone in self isolation protocol
-                  </Button>
-                </li>
-                <li>
-                  <Button
-                    variant="link"
-                    target="_blank" rel="noopener noreferrer" 
-                    href="https://wiki.queercare.network/index.php?title=Principles_and_assumptions_for_doing_support_work_in_the_covid-19_pandemic">
-                    Principles and assumptions for doing support work in the covid-19 pandemic
-                  </Button>
-                </li>
-              </ul>
-              
-              <p>
-                Please arrange for the money to be sent ideally by bank transfer to our mutual aid bank account (from which we will then reimburse you), or to be left under a mat/ in a flower pot etc. and for the change and receipt to be left in that same location. With shopping left at the door. Please walk away before the self isolating person opens the door. It is important the vulnerable person does not come in direct contact with you for their own protection.
-              </p>
-              <p>
-                In short, please wash your hands for at least 20 seconds and use hand sanitiser when possible before delivery.
-              </p>
-              
-              <p>
-                More information on health and safety, safeguarding and further advice can be found on our 
-                <a
-                  href="https://drive.google.com/drive/folders/1q4ahDnigbdv-G0J83JuftwQ7e_iCpSSs"
-                  className="ml-1"
-                  target="_blank" rel="noopener noreferrer" 
-                >
-                  Google Share drive
-                </a>.
-              </p>
             </Col>
           </Row>
           

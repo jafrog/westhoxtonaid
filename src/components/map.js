@@ -13,15 +13,13 @@ class Map extends React.Component {
     zoom: 14,
   }
   
-  renderMap = (ref) => {
+  mapContainer = null
+  
+  componentDidMount() {
     mapboxgl.accessToken = this.props.data.site.siteMetadata.credentials.mapboxgl.accessToken
     
-    if (ref == null) {
-      return
-    }
-    
     const map = new mapboxgl.Map({
-      container: ref,
+      container: this.mapContainer,
       style: 'mapbox://styles/mapbox/streets-v11',
       center: [this.state.lng, this.state.lat],
       zoom: this.state.zoom
@@ -67,7 +65,7 @@ class Map extends React.Component {
         </Helmet>
         <div className="row justify-content-center">
           <div
-          ref={el => this.renderMap(el)}
+          ref={el => this.mapContainer = el}
           className="col-10 map"
           >
         </div>
