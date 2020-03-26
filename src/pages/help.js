@@ -41,7 +41,7 @@ const HelpPage = () => {
                   <p>
                     <Button
                       href="https://forms.gle/AmbJRrdN4QJVcPVGA"
-                      target="_blank"
+                      target="_blank" rel="noopener noreferrer"
                       className="d-flex align-items-center btn-lg btn-primary w-100">
                       <FaClipboard className="mr-1" />
                       Assistance request form

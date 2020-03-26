@@ -1,8 +1,7 @@
 import React from "react"
 import {
   Row,
-  Col,
-  Button
+  Col
 } from "react-bootstrap"
 import { Link } from "gatsby"
 
@@ -16,7 +15,11 @@ const IndexPage = () => (
     
     <Row>
       <Col xs={12}>
-        <h1 className="display-3 mb-3">West Hoxton Mutual Aid</h1>
+        <h1 className="display-3 mb-3 title">
+          <span className="heart-emoji" role="img" aria-label="Heart emoji">❤️ </span>
+            West Hoxton Mutual Aid
+          <span className="heart-emoji" role="img" aria-label="Heart emoji"> ❤️</span>
+        </h1>
       </Col>
     </Row>
     
@@ -52,11 +55,11 @@ const IndexPage = () => (
       </p>
 
       <p>
-        To request assistance from us please click <a target="_blank" href="https://forms.gle/AmbJRrdN4QJVcPVGA">here</a>.
+        To request assistance from us please click <a target="_blank" rel="noopener noreferrer" href="https://forms.gle/AmbJRrdN4QJVcPVGA">here</a>.
       </p>
       
       <p>
-        To volunteer to help your fellow Hoxton West residents please click <a target="_blank" href="https://tinyurl.com/th2h5ox">here</a>.
+        To volunteer to help your fellow Hoxton West residents please click <a target="_blank" rel="noopener noreferrer" href="https://tinyurl.com/th2h5ox">here</a>.
       </p>
       </Col>
     </Row>
