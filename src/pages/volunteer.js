@@ -13,6 +13,7 @@ import {
   FaWhatsappSquare,
   FaWhatsapp,
   FaExclamationTriangle,
+  FaTwitterSquare,
 } from "react-icons/fa"
 import { Link } from "gatsby"
 
@@ -164,17 +165,19 @@ const VolunteerPage = () => {
               <h2>Keep up-to-date via social media</h2>
             </Col>
           </Row>
-          <Row className="mb-5">
-            <Col xs={12} className="mb-3 d-flex align-items-center justify-content-center">
+          <Row className="mb-5 d-flex justify-content-center">
+            <Col xs={12} sm={4} className="px-3 d-flex justify-content-center mb-3">
               <Button
                 href="https://www.facebook.com/groups/791760537983496/"
                 variant="secondary"
-                className="d-flex align-items-center mx-3"
+                className="d-flex align-items-center"
                 target="_blank" rel="noopener noreferrer" 
                 >
                   <FaFacebookSquare className="mr-1"/>
                   Facebook
               </Button>
+            </Col>
+            <Col xs={12} sm={4} className="px-3 d-flex justify-content-center mb-3">  
               <Button
                 href="https://chat.whatsapp.com/ExfTKM1Cpdz9V9o9nWRDnX"
                 variant="secondary"
@@ -185,15 +188,26 @@ const VolunteerPage = () => {
                   Whatsapp
               </Button>
             </Col>
+            <Col xs={12} sm={4} className="px-3 d-flex justify-content-center mb-3">
+              <Button
+                href="https://twitter.com/HoxtonWestAid"
+                variant="secondary"
+                className="d-flex align-items-center"
+                target="_blank" rel="noopener noreferrer" 
+                >
+                  <FaWhatsappSquare className="mr-1"/>
+                  Twitter
+              </Button>
+            </Col>
           </Row>
           
           <Row className="mb-5">
-            <Col xs={12} sm={6}>
+            <Col xs={12} lg={6} className="mb-3">
               <div style={{width: "400px"}}>
                 <Img fluid={data.mapImage.childImageSharp.fluid} />
               </div>
             </Col>
-            <Col xs={12} sm={6}>
+            <Col xs={12} lg={6}>
               <p>Join your street area WhatsApp group to get notified on assistance requests in your area that you could help out with</p>
               <Row>
                 {areaWhatsapps.eachSlice(5).map((slice, index) => (

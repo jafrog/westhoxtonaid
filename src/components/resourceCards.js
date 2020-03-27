@@ -20,7 +20,7 @@ const ResourceCards = ({ resources, perRow }) => (
   {resources.eachSlice(perRow).map((slice, index) => (
     <Row key={index}>
       {slice.map((link, index) => (
-        <Col xs={12} md={12/perRow} key={index} className="mb-5">
+        <Col xs={12} lg={12/perRow} key={index} className="mb-5">
           <ResourceCard
             title={link.title}
             text={link.text}

@@ -6,8 +6,6 @@ import {
 } from "react-bootstrap"
 import {
   FaClipboard,
-  FaEnvelope,
-  FaPhone
 } from "react-icons/fa"
 
 import Layout from "../components/layout"

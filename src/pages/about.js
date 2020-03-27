@@ -6,6 +6,7 @@ import {
 } from "react-bootstrap"
 import {
   FaInfoCircle,
+  FaExclamationTriangle
 } from "react-icons/fa"
 
 import Layout from "../components/layout"
@@ -21,7 +22,7 @@ const AboutPage = () => (
       </Col>
     </Row>
     
-    <Row>
+    <Row className="mb-5">
       <Col xs={12}>  
         
         <p>
@@ -85,12 +86,85 @@ const AboutPage = () => (
                   if you need help quickly
                 </li>
                 <li>
-                  Not able to accept an liability in relation to the help you offer or request
+                  Not able to accept any liability in relation to the help you offer or request
                 </li>
                 <li>
                   Committed to the smooth running of this community initiative
                 </li>
               </ul>
+            </Col>
+          </Row>
+        </Alert>
+      </Col>
+    </Row>
+    
+    <Row>
+      <Col xs={12}>
+        <h2>Our principles</h2>
+      </Col>
+    </Row>
+    
+    <Row>
+      <Col xs={12}>
+        <p className="lead">
+          We operate according to the following principles. 
+        </p>
+
+        <p>
+          <ol>
+            <li>
+              We organise on the basis of solidarity, not charity
+            </li>
+            <li>
+              We are against all forms of oppression, including but not limited 
+              to, racism, sexism, ableism, ageism, homophobia, biphobia, transphobia, xenophobia and classism
+            </li>
+            <li>
+              We work together on an equal basis, making collective decisions and 
+              being responsible and accountable to each other in our actions within this group
+            </li>
+            <li>
+              We are a self-organised, de-centralised community group who are independent from 
+              all political parties, government/state agencies and authorities and other organisations and groups
+            </li>
+            <li>
+              We extend mutual aid to all members of our community and see everyone as part of it, 
+              regardless of immigration status or personal circumstances*
+            </li>
+            <li>
+              We actively take initiative when both offering and receiving support
+            </li>
+            <li>
+              We recognise that this crisis will affect some more than others, so we'll prioritize the needs of those most affected
+            </li>
+            <li>
+              We prioritise health and safety in order to ensure that we do not 
+              contribute to further spread of Covid-19, only leaving home when essential, 
+              including when fulfilling support requests
+            </li>
+            <li>
+              We will always try and keep our tasks local to respect time and resources of 
+              all involved and support local shops and businesses in our community
+            </li>
+            <li>
+              We recognise that we can both request and offer support, which is why our focus is on offering each other mutual aid and recognising the benefits of collective care and community organising
+            </li>
+          </ol>
+        </p>
+        
+        <Alert variant="warning" className="mt-5">
+          <Row>
+            <Col xs={1} className="d-flex align-items-center">
+              <FaExclamationTriangle style={{
+                width: "3rem",
+                fontSize: "2rem",
+              }} className="mr-3" />
+            </Col>
+            <Col xs={11}>
+              We don't and will not work in conjunction with any enforcement agencies or authorities,
+              including the Home Office, Department for Work and Pensions and any other agency who
+              pose a threat to people's right to access support and care as and when needed. We expect all members to adhere to this and will remove anyone from our group found
+              to be working outside of the guidance and collective guidelines.
             </Col>
           </Row>
         </Alert>

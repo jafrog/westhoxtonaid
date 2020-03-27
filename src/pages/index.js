@@ -31,7 +31,7 @@ const IndexPage = () => {
       <SEO title="Home" />
       
       <Row>
-        <Col xs={12}>
+        <Col xs={12} className="d-flex justify-content-center">
           <h1 className="display-3 mb-3 title">
             <span className="heart-emoji" role="img" aria-label="Heart emoji">❤️ </span>
             West Hoxton Mutual Aid
@@ -41,7 +41,7 @@ const IndexPage = () => {
       </Row>
       
       <Row className="mb-3">
-        <Col xs={12}>
+        <Col xs={12} className="d-flex justify-content-center">
           <h5>Offering support to everyone in Hoxton West during the COVID-19 outbreak</h5>
         </Col>
       </Row>
