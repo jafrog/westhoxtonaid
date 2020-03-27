@@ -116,133 +116,123 @@ const VolunteerPage = () => {
         </Row>
         
         <Row className="mb-5">
-          <Col>
-            <Row className="mb-5">
-              <Col xs={12} sm={8}>
-                <p className="lead">
-                  All volunteers that would like to help out please fill in your details
-                </p>
-                <p>
-                  By registering your details as a volunteer will help us to match any requests that come through and identify areas that may need extra support.
-                </p>
-                <p>
-                  To download our leaflets click <a target="_blank" rel="noopener noreferrer" href={data.allFile.nodes[0]["publicURL"]}>here</a>.
-                </p>
-              </Col>
-              <Col xs={12} sm={4} className="d-flex justify-content-center align-items-center mb-3">
-                <p>
-                  <Button
-                    href="https://forms.gle/yMZGT5m2irvLpnxe7"
-                    target="_blank" rel="noopener noreferrer" 
-                    className="d-flex align-items-center btn-lg btn-primary w-100">
-                    <FaClipboard className="mr-1" />
-                    Register to volunteer
-                  </Button>
-                </p>
-            </Col>
-          </Row>
-          
-          <Row className="mb-5">
-            <Col xs={12}>
-              <h2 className="mb-3">Completing assistance requests</h2>
-              
-              <p>
-                In line with the government guidelines of minimising your time outdoors, please only run assistance requests in conjunction with your own errands or exercise time.
-              </p>
-              <Alert variant="warning" className="d-flex align-items-center">
-                <FaExclamationTriangle style={{
-                  width: "2rem",
-                  fontSize: "1.25rem",
-                }} className="mr-3" />
-                For errands please make sure you are following the  
-                <Link to="/health" className="ml-1"> safety advice </Link>
-              </Alert>
-            </Col>
-          </Row>
-          
-          <Row>
-            <Col xs={12}>
-              <h2>Keep up-to-date via social media</h2>
-            </Col>
-          </Row>
-          <Row className="mb-5 d-flex justify-content-center">
-            <Col xs={12} sm={4} className="px-3 d-flex justify-content-center mb-3">
-              <Button
-                href="https://www.facebook.com/groups/791760537983496/"
-                variant="secondary"
-                className="d-flex align-items-center"
-                target="_blank" rel="noopener noreferrer" 
-                >
-                  <FaFacebookSquare className="mr-1"/>
-                  Facebook
-              </Button>
-            </Col>
-            <Col xs={12} sm={4} className="px-3 d-flex justify-content-center mb-3">  
-              <Button
-                href="https://chat.whatsapp.com/ExfTKM1Cpdz9V9o9nWRDnX"
-                variant="secondary"
-                className="d-flex align-items-center"
-                target="_blank" rel="noopener noreferrer" 
-                >
-                  <FaWhatsappSquare className="mr-1"/>
-                  Whatsapp
-              </Button>
-            </Col>
-            <Col xs={12} sm={4} className="px-3 d-flex justify-content-center mb-3">
-              <Button
-                href="https://twitter.com/HoxtonWestAid"
-                variant="secondary"
-                className="d-flex align-items-center"
-                target="_blank" rel="noopener noreferrer" 
-                >
-                  <FaWhatsappSquare className="mr-1"/>
-                  Twitter
-              </Button>
-            </Col>
-          </Row>
-          
-          <Row className="mb-5">
-            <Col xs={12} lg={6} className="mb-3">
-              <div style={{width: "400px"}}>
-                <Img fluid={data.mapImage.childImageSharp.fluid} />
-              </div>
-            </Col>
-            <Col xs={12} lg={6}>
-              <p>Join your street area WhatsApp group to get notified on assistance requests in your area that you could help out with</p>
-              <Row>
-                {areaWhatsapps.eachSlice(5).map((slice, index) => (
-                  <Col xs={12} sm={6} key={index}>
-                    {slice.map((link, index) => (
-                      <Button
-                        variant="outline-secondary"
-                        href={link.href}
-                        className="d-flex align-items-center justify-content-center mb-3"
-                        target="_blank" rel="noopener noreferrer" 
-                        key={index}
-                        >
-                        <FaWhatsapp className="mr-1"/>
-                        {link.area}
-                      </Button>
-                    ))}
-                  </Col>
-                ))}
-              </Row>
-            </Col>
-          </Row>
-          
-          <Row>
-            <Col xs={12}>
-              <h2>Other ways to help</h2>
-            </Col>
-          </Row>
-          
-          <Row>
-            <Col xs={12}>
-              <ResourceCards resources={resources} perRow={3}/>
-            </Col>
-          </Row>
-        </Col>
-      </Row>
+          <Col xs={12} md={8}>
+            <p className="lead">
+              All volunteers that would like to help out please fill in your details
+            </p>
+            <p>
+              By registering your details as a volunteer will help us to match any requests that come through and identify areas that may need extra support.
+            </p>
+            <p>
+              To download our leaflets click <a target="_blank" rel="noopener noreferrer" href={data.allFile.nodes[0]["publicURL"]}>here</a>.
+            </p>
+          </Col>
+          <Col xs={12} md={4} className="d-flex justify-content-center align-items-center mt-3 mt-md-0">
+            <Button
+              href="https://forms.gle/yMZGT5m2irvLpnxe7"
+              target="_blank" rel="noopener noreferrer" 
+              className="d-flex align-items-center btn-lg btn-primary px-4 py-3">
+              <FaClipboard className="mr-1" />
+              Register to volunteer
+            </Button>
+          </Col>
+        </Row>
+        
+        <Row className="mb-5">
+          <Col xs={12}>
+            <h2 className="mb-3">Completing assistance requests</h2>
+            
+            <p>
+              In line with the government guidelines of minimising your time outdoors, please only run assistance requests in conjunction with your own errands or exercise time.
+            </p>
+            <Alert variant="warning" className="d-flex align-items-center">
+              <FaExclamationTriangle style={{
+                width: "2rem",
+                fontSize: "1.25rem",
+              }} className="mr-3" />
+              For errands please make sure you are following the  
+              <Link to="/health" className="ml-1"> safety advice </Link>
+            </Alert>
+          </Col>
+        </Row>
+        
+        <Row>
+          <Col xs={12}>
+            <h2>Keep up-to-date via social media</h2>
+          </Col>
+        </Row>
+        <Row className="mb-5 d-flex justify-content-center">
+          <Col xs={12} sm={4} className="px-3 d-flex justify-content-center mb-3">
+            <Button
+              href="https://www.facebook.com/groups/791760537983496/"
+              variant="secondary"
+              className="d-flex align-items-center"
+              target="_blank" rel="noopener noreferrer">
+              <FaFacebookSquare className="mr-1"/>
+              Facebook
+            </Button>
+          </Col>
+          <Col xs={12} sm={4} className="px-3 d-flex justify-content-center mb-3">  
+            <Button
+              href="https://chat.whatsapp.com/ExfTKM1Cpdz9V9o9nWRDnX"
+              variant="secondary"
+              className="d-flex align-items-center"
+              target="_blank" rel="noopener noreferrer">
+              <FaWhatsappSquare className="mr-1"/>
+              Whatsapp
+            </Button>
+          </Col>
+          <Col xs={12} sm={4} className="px-3 d-flex justify-content-center mb-3">
+            <Button
+              href="https://twitter.com/HoxtonWestAid"
+              variant="secondary"
+              className="d-flex align-items-center"
+              target="_blank" rel="noopener noreferrer">
+              <FaTwitterSquare className="mr-1"/>
+              Twitter
+            </Button>
+          </Col>
+        </Row>
+        
+        <Row className="mb-5">
+          <Col xs={12} lg={6} className="mb-3">
+            <div style={{width: "400px"}}>
+              <Img fluid={data.mapImage.childImageSharp.fluid} />
+            </div>
+          </Col>
+          <Col xs={12} lg={6}>
+            <p>Join your street area WhatsApp group to get notified on assistance requests in your area that you could help out with</p>
+            <Row>
+              {areaWhatsapps.eachSlice(5).map((slice, index) => (
+                <Col xs={12} sm={6} key={index}>
+                  {slice.map((link, index) => (
+                    <Button
+                      variant="outline-secondary"
+                      href={link.href}
+                      className="d-flex align-items-center justify-content-center mb-3"
+                      target="_blank" rel="noopener noreferrer" 
+                      key={index}>
+                      <FaWhatsapp className="mr-1"/>
+                      {link.area}
+                    </Button>
+                  ))}
+                </Col>
+              ))}
+            </Row>
+          </Col>
+        </Row>
+        
+        <Row>
+          <Col xs={12}>
+            <h2>Other ways to help</h2>
+          </Col>
+        </Row>
+        
+        <Row>
+          <Col xs={12}>
+            <ResourceCards resources={resources} perRow={3}/>
+          </Col>
+        </Row>
     </Layout>
   )
 }
