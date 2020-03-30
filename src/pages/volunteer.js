@@ -9,17 +9,15 @@ import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import {
   FaClipboard,
-  FaFacebookSquare,
-  FaWhatsappSquare,
   FaWhatsapp,
   FaExclamationTriangle,
-  FaTwitterSquare,
 } from "react-icons/fa"
 import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import ResourceCards from "../components/resourceCards"
+import Social from "../components/social"
 
 const areaWhatsapps = [
   {
@@ -161,38 +159,8 @@ const VolunteerPage = () => {
             <h2>Keep up-to-date via social media</h2>
           </Col>
         </Row>
-        <Row className="mb-5 d-flex justify-content-center">
-          <Col xs={12} sm={4} className="px-3 d-flex justify-content-center mb-3">
-            <Button
-              href="https://www.facebook.com/groups/791760537983496/"
-              variant="secondary"
-              className="d-flex align-items-center"
-              target="_blank" rel="noopener noreferrer">
-              <FaFacebookSquare className="mr-1"/>
-              Facebook
-            </Button>
-          </Col>
-          <Col xs={12} sm={4} className="px-3 d-flex justify-content-center mb-3">  
-            <Button
-              href="https://chat.whatsapp.com/ExfTKM1Cpdz9V9o9nWRDnX"
-              variant="secondary"
-              className="d-flex align-items-center"
-              target="_blank" rel="noopener noreferrer">
-              <FaWhatsappSquare className="mr-1"/>
-              Whatsapp
-            </Button>
-          </Col>
-          <Col xs={12} sm={4} className="px-3 d-flex justify-content-center mb-3">
-            <Button
-              href="https://twitter.com/HoxtonWestAid"
-              variant="secondary"
-              className="d-flex align-items-center"
-              target="_blank" rel="noopener noreferrer">
-              <FaTwitterSquare className="mr-1"/>
-              Twitter
-            </Button>
-          </Col>
-        </Row>
+        
+        <Social />
         
         <Row className="mb-5">
           <Col xs={12} lg={6} className="mb-3">

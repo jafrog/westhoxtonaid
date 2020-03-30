@@ -6,9 +6,11 @@ import {
   Button
 } from "react-bootstrap"
 
+import Social from "../components/social"
+
 const Contact = () => (
   <>
-    <Row>
+    <Row className="mb-5">
       <Col xs={12} md={6} className="mb-5 d-flex justify-content-center">
         <Card className="contact-card">
           <Card.Body>
@@ -51,13 +53,13 @@ const Contact = () => (
           </Col>
         </Row>
         
-        <Row className="mb-5">
-          <Col>
-            <p>
-              You can also find us on <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/groups/791760537983496/">Facebook</a>
-            </p>
+        <Row>
+          <Col xs={12}>
+            <h2>Find us on social media</h2>
           </Col>
         </Row>
+        
+        <Social />
     </>
 )
 
