@@ -1,7 +1,7 @@
 backend:
-  name: github
-  repo: jafrog/westhoxtonaid
-  
+  name: git-gateway
+  branch: master
+
 media_folder: static/assets
 public_folder: /assets
 collections:
