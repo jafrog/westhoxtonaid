@@ -34,9 +34,7 @@ const AboutPage = () => (
         <p>
           On 15 March 2020, a few residents clubbed together to set us up. We now have over 100 volunteers (and counting!) who are providing 
           assistance to their fellow Hoxton West residents. Our aim is to support all residents who need us, either by assisting directly with 
-          shopping collections, walking pets or calling anyone who needs to hear a friendly voice at this difficult time. We have good links 
-          with local Hoxton councillors and other local support organisations, so if a resident's needs are better served by them, we will help 
-          to put them in touch with the right person.
+          shopping collections, walking pets or calling anyone who needs to hear a friendly voice at this difficult time.
         </p>
 
         <h2 className="mt-5 mb-3">The way we work</h2>

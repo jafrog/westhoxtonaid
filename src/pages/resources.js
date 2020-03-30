@@ -240,8 +240,8 @@ const ResourcesPage = () => (
         <p>
           We are also here to help you navigate these different resources and will do our best to help you decide which is right for you (although 
             a gentle reminder that our volunteers do not necessarily have expertise in relation to these resources and cannot provide legal, medical 
-            or any other professional advice. We will however try our best to support you.). Please do not hesitate to contact us 
-            <Link to="/contact">here</Link> for a confidential chat about your options.
+            or any other professional advice. We will however try our best to support you.). Please do not hesitate to contact 
+            us <Link to="/contact">here</Link> for a confidential chat about your options.
         </p>
         
         <p>
