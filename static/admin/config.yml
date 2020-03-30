@@ -1,5 +1,6 @@
 backend:
-  name: test-repo
+  name: github
+  repo: jafrog/westhoxtonaid
   
 media_folder: static/assets
 public_folder: /assets
@@ -9,6 +10,6 @@ collections:
     folder: content
     create: true
     fields:
-      - { name: page, label: Page, widget: select, options: ["Home", "Volunteer", "Get help", "Health & Safety", "Resources", "Contact us", "About us"] }
+      - { name: page, label: Page, widget: select, options: ["Home", "Volunteer", "Get help", "Health & Safety", "More support", "Contact us", "About us"] }
       - { name: title, label: Title }
       - { name: body, label: Body, widget: markdown }
