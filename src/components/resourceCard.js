@@ -20,7 +20,7 @@ const ResourceCard = ({ title, text, website, phone }) => {
         <Row>
           {website ? (
           <Col xs={12} className="mt-1">
-            <Card.Link href={website} target="_blank" >
+            <Card.Link href={website} target="_blank" rel="noopener noreferrer" >
               <FaGlobe className="mr-1" />
               Website
             </Card.Link>

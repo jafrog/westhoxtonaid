@@ -9,8 +9,6 @@ import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import {
   FaClipboard,
-  FaFacebookSquare,
-  FaWhatsappSquare,
   FaWhatsapp,
   FaExclamationTriangle,
 } from "react-icons/fa"
@@ -19,6 +17,7 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import ResourceCards from "../components/resourceCards"
+import Social from "../components/social"
 
 const areaWhatsapps = [
   {
@@ -96,8 +95,13 @@ const VolunteerPage = () => {
           }
         }
       }
-    }
-    `)
+      allFile(filter: { name: { eq: "flyers" } }) {
+          nodes {
+            publicURL
+          }
+        }
+      }
+  `)
     
     return (
       <Layout>
@@ -110,156 +114,93 @@ const VolunteerPage = () => {
         </Row>
         
         <Row className="mb-5">
-          <Col>
-            <Row className="mb-5">
-              <Col xs={12} sm={8}>
-                <p className="lead">
-                  All volunteers that would like to help out please fill in your details
-                </p>
-                <p>
-                  By registering your details as a volunteer will help us to match any requests that come through and identify areas that may need extra support.
-                </p>
-              </Col>
-              <Col xs={12} sm={4} className="d-flex justify-content-center align-items-center mb-3">
-                <p>
-                  <Button
-                    href="https://forms.gle/yMZGT5m2irvLpnxe7"
-                    target="_blank" 
-                    className="d-flex align-items-center btn-lg btn-primary w-100">
-                    <FaClipboard className="mr-1" />
-                    Register to volunteer
-                  </Button>
-                </p>
-            </Col>
-          </Row>
-          
-          <Row>
-            <Col xs={12}>
-              <h2>Keep up-to-date via social media</h2>
-            </Col>
-          </Row>
-          <Row className="mb-5">
-            <Col xs={12} className="mb-3 d-flex align-items-center justify-content-center">
-              <Button
-                href="https://www.facebook.com/groups/791760537983496/"
-                variant="secondary"
-                className="d-flex align-items-center mx-3"
-                target="_blank" 
-                >
-                  <FaFacebookSquare className="mr-1"/>
-                  Facebook
-              </Button>
-              <Button
-                href="https://chat.whatsapp.com/ExfTKM1Cpdz9V9o9nWRDnX"
-                variant="secondary"
-                className="d-flex align-items-center"
-                target="_blank" 
-                >
-                  <FaWhatsappSquare className="mr-1"/>
-                  Whatsapp
-              </Button>
-            </Col>
-          </Row>
-          
-          <Row className="mb-5">
-            <Col xs={12} sm={6}>
-              <div style={{width: "400px"}}>
-                <Img fluid={data.mapImage.childImageSharp.fluid} />
-              </div>
-            </Col>
-            <Col xs={12} sm={6}>
-              <p>Join your street area WhatsApp group to get notified on assistance requests in your area that you could help out with</p>
-              <Row>
-                {areaWhatsapps.eachSlice(5).map((slice, index) => (
-                  <Col xs={12} sm={6} key={index}>
-                    {slice.map((link, index) => (
-                      <Button
-                        variant="outline-secondary"
-                        href={link.href}
-                        className="d-flex align-items-center justify-content-center mb-3"
-                        target="_blank" 
-                        key={index}
-                        >
-                        <FaWhatsapp className="mr-1"/>
-                        {link.area}
-                      </Button>
-                    ))}
-                  </Col>
-                ))}
-              </Row>
-            </Col>
-          </Row>
-          
-          <Row className="mb-5">
-            <Col xs={12}>
-              <h2 className="mb-3">Completing assistance requests</h2>
-              
-              <p>
-                In line with the government guidelines of minimising your time outdoors, please only run assistance requests in conjunction with your own errands or exercise time.
-              </p>
-              <Alert variant="warning" className="d-flex align-items-center">
-                <FaExclamationTriangle style={{
-                  width: "2rem",
-                  fontSize: "1.25rem",
-                }} className="mr-3" />
-                For errands please make sure you are following the  
-                <Link to="/health" className="ml-1"> safety advice </Link>
-              </Alert>
-              <p>
-                Please read the following links as a guide of best practice:
-              </p>
-              <ul>
-                <li>
-                  <Button
-                    variant="link"
-                    target="_blank" 
-                    href="https://queercare.network/our-work/resources/covid-19/delivering-items-to-someone-in-self-isolation-protocol/">
-                    Delivering items to someone in self isolation protocol
-                  </Button>
-                </li>
-                <li>
-                  <Button
-                    variant="link"
-                    target="_blank" 
-                    href="https://wiki.queercare.network/index.php?title=Principles_and_assumptions_for_doing_support_work_in_the_covid-19_pandemic">
-                    Principles and assumptions for doing support work in the covid-19 pandemic
-                  </Button>
-                </li>
-              </ul>
-              
-              <p>
-                Please arrange for the money to be sent ideally by bank transfer to our mutual aid bank account (from which we will then reimburse you), or to be left under a mat/ in a flower pot etc. and for the change and receipt to be left in that same location. With shopping left at the door. Please walk away before the self isolating person opens the door. It is important the vulnerable person does not come in direct contact with you for their own protection.
-              </p>
-              <p>
-                In short, please wash your hands for at least 20 seconds and use hand sanitiser when possible before delivery.
-              </p>
-              
-              <p>
-                More information on health and safety, safeguarding and further advice can be found on our 
-                <a
-                  href="https://drive.google.com/drive/folders/1q4ahDnigbdv-G0J83JuftwQ7e_iCpSSs"
-                  className="ml-1"
-                  target="_blank" 
-                >
-                  Google Share drive
-                </a>.
-              </p>
-            </Col>
-          </Row>
-          
-          <Row>
-            <Col xs={12}>
-              <h2>Other ways to help</h2>
-            </Col>
-          </Row>
-          
-          <Row>
-            <Col xs={12}>
-              <ResourceCards resources={resources} perRow={3}/>
-            </Col>
-          </Row>
-        </Col>
-      </Row>
+          <Col xs={12} md={8}>
+            <p className="lead">
+              All volunteers that would like to help out please fill in your details
+            </p>
+            <p>
+              By registering your details as a volunteer will help us to match any requests that come through and identify areas that may need extra support.
+            </p>
+            <p>
+              To download our leaflets click <a target="_blank" rel="noopener noreferrer" href={data.allFile.nodes[0]["publicURL"]}>here</a>.
+            </p>
+          </Col>
+          <Col xs={12} md={4} className="d-flex justify-content-center align-items-center mt-3 mt-md-0">
+            <Button
+              href="https://forms.gle/yMZGT5m2irvLpnxe7"
+              target="_blank" rel="noopener noreferrer" 
+              className="d-flex align-items-center btn-lg btn-primary px-4 py-3">
+              <FaClipboard className="mr-1" />
+              Register to volunteer
+            </Button>
+          </Col>
+        </Row>
+        
+        <Row className="mb-5">
+          <Col xs={12}>
+            <h2 className="mb-3">Completing assistance requests</h2>
+            
+            <p>
+              In line with the government guidelines of minimising your time outdoors, please only run assistance requests in conjunction with your own errands or exercise time.
+            </p>
+            <Alert variant="warning" className="d-flex align-items-center">
+              <FaExclamationTriangle style={{
+                width: "2rem",
+                fontSize: "1.25rem",
+              }} className="mr-3" />
+              For errands please make sure you are following the  
+              <Link to="/health" className="ml-1"> safety advice </Link>
+            </Alert>
+          </Col>
+        </Row>
+        
+        <Row>
+          <Col xs={12}>
+            <h2>Keep up-to-date via social media</h2>
+          </Col>
+        </Row>
+        
+        <Social />
+        
+        <Row className="mb-5">
+          <Col xs={12} lg={6} className="mb-3">
+            <div style={{width: "400px"}}>
+              <Img fluid={data.mapImage.childImageSharp.fluid} />
+            </div>
+          </Col>
+          <Col xs={12} lg={6}>
+            <p>Join your street area WhatsApp group to get notified on assistance requests in your area that you could help out with</p>
+            <Row>
+              {areaWhatsapps.eachSlice(5).map((slice, index) => (
+                <Col xs={12} sm={6} key={index}>
+                  {slice.map((link, index) => (
+                    <Button
+                      variant="outline-secondary"
+                      href={link.href}
+                      className="d-flex align-items-center justify-content-center mb-3"
+                      target="_blank" rel="noopener noreferrer" 
+                      key={index}>
+                      <FaWhatsapp className="mr-1"/>
+                      {link.area}
+                    </Button>
+                  ))}
+                </Col>
+              ))}
+            </Row>
+          </Col>
+        </Row>
+        
+        <Row>
+          <Col xs={12}>
+            <h2>Other ways to help</h2>
+          </Col>
+        </Row>
+        
+        <Row>
+          <Col xs={12}>
+            <ResourceCards resources={resources} perRow={3}/>
+          </Col>
+        </Row>
     </Layout>
   )
 }

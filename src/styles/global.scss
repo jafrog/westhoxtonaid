@@ -22,22 +22,38 @@ body {
   color: $red;
 }
 
-@include media-breakpoint-up(lg) {
-  .title {
-    font-size: 3.75rem;
-  }
-  
-  .heart-emoji {
-    font-size: 3rem;
-  }
+.heart-emoji {
+  font-size: 3.25rem;
 }
 
-@include media-breakpoint-up(xl) {
-  .title {
-    font-size: 4rem;
+.contact-card {
+  min-width: 400px;
+  width: 450px;
+}
+
+.contact-link {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.contact-card-title {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+@include media-breakpoint-down(md) {
+  .contact-card {
+    min-width: 350px;
+    width: 400px;
   }
-  
-  .heart-emoji {
-    font-size: 3.5rem;
+
+  .contact-link {
+    font-size: 1.25rem;
+    font-weight: 500;
+  }
+
+  .contact-card-title {
+    font-size: 1rem;
+    font-weight: 300;
   }
 }

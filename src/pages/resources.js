@@ -1,7 +1,9 @@
 import React from "react"
 import {
   Row,
+  Col
 } from "react-bootstrap"
+import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -218,7 +220,34 @@ const ResourcesPage = () => (
     <SEO title="Resources" />
     
     <Row>
-      <h1 className="display-4">Support services</h1>
+      <Col xs={12}>
+        <h1 className="display-4">Support services</h1>
+      </Col>
+    </Row>
+    
+    <Row className="mb-5">
+      <Col xs={12}>
+        <p>
+          We are here to support the residents of Hoxton West and if we cannot help you ourselves then we will do our very best to find the people who can. 
+        </p>
+
+        <p>
+          This page contains a non-exhaustive list of other organisations offering support to UK residents affected by the coronavirus outbreak, 
+          whether that be in relation to those directly affected by the virus (i.e. those designated as vulnerable by the NHS) or those who need 
+          assistance in relation to housing, food, benefits, mental health or any other issues that you are facing during the outbreak. 
+        </p>
+        
+        <p>
+          We are also here to help you navigate these different resources and will do our best to help you decide which is right for you (although 
+            a gentle reminder that our volunteers do not necessarily have expertise in relation to these resources and cannot provide legal, medical 
+            or any other professional advice. We will however try our best to support you.). Please do not hesitate to contact 
+            us <Link to="/contact">here</Link> for a confidential chat about your options.
+        </p>
+        
+        <p>
+          If you would like us to add another support system or organisation to this list, please contact us <Link to="/contact">here</Link>.
+        </p>
+      </Col>
     </Row>
     
     <ResourceCards 
@@ -226,8 +255,10 @@ const ResourcesPage = () => (
       perRow={3}
     />
       
-      <Row>
-        <h1>Emergency food</h1>
+      <Row className="mt-5">
+        <Col xs={12}>
+          <h1>Emergency food</h1>
+        </Col>
       </Row>
       
       <ResourceCards 
@@ -235,8 +266,10 @@ const ResourcesPage = () => (
         perRow={3}
       />
   
-      <Row>
-        <h1>Mental health</h1>
+      <Row className="mt-5">
+        <Col xs={12}>
+          <h1>Mental health</h1>
+        </Col>
       </Row>
       
       <Row>
@@ -248,8 +281,10 @@ const ResourcesPage = () => (
         perRow={3}
       />
 
-      <Row>
-        <h1>Housing</h1>
+      <Row className="mt-5">
+        <Col xs={12}>
+          <h1>Housing</h1>
+        </Col>
       </Row>
       
       <ResourceCards 
@@ -257,8 +292,10 @@ const ResourcesPage = () => (
         perRow={3}
       /> 
       
-      <Row>
-        <h1>Work</h1>
+      <Row className="mt-5">
+        <Col xs={12}>
+          <h1>Work</h1>
+        </Col>
       </Row>
       
       <ResourceCards 
@@ -266,8 +303,10 @@ const ResourcesPage = () => (
         perRow={3}
       />
       
-      <Row>
-        <h1>Benefits</h1>
+      <Row className="mt-5">
+        <Col xs={12}>
+          <h1>Benefits</h1>
+        </Col>
       </Row>
       
       <ResourceCards 
@@ -275,30 +314,16 @@ const ResourcesPage = () => (
         perRow={3}
       /> 
       
-      <Row>
-        <h1>Migrants</h1>
-      </Row>
-      
-      <Row>
-        <p>
-          NOTE: We should never pass someone’s details to the council without their permission just in case they are undocumented and therefore do not want to be in contact with an arm of the state
-        </p>
+      <Row className="mt-5">
+        <Col xs={12}>
+          <h1>Migrants</h1>
+        </Col>
       </Row>
       
       <ResourceCards 
         resources={migrants}
         perRow={3}
       />
-      
-      <Row>
-        <h1>Domestic violence</h1>
-      </Row>    
-      
-      <Row>
-        <p>
-          I believe Grace / Olori (in our group) has worked in this area and may be a good person to advise on where to signpost if anyone presents with this issue - H
-        </p>
-      </Row> 
 </Layout>
 )
 
