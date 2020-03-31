@@ -11,5 +11,6 @@ collections:
     create: true
     fields:
       - { name: page, label: Page, widget: select, options: ["Home", "Volunteer", "Get help", "Health & Safety", "More support", "Contact us", "About us"] }
-      - { name: title, label: Title }
+      - { name: title, label: Title, widget: string }
+      - { name: position, label: Position, widget: number, default: 0, valueType: "int" }
       - { name: body, label: Body, widget: markdown }
