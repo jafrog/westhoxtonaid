@@ -6,6 +6,7 @@ media_folder: static/assets
 public_folder: /assets
 collections:
   - name: content
+    identifier_field: "{{page}}_{{position}}"
     label: Content Sections
     folder: content
     create: true
@@ -15,6 +16,7 @@ collections:
       - { name: position, label: Position, widget: number, default: 0, valueType: "int" }
       - { name: body, label: Body, widget: markdown }
   - name: resources
+    identifier_field: "{{page}}_{{section}}_{{position}}"
     label: Resources
     folder: resources
     create: true
