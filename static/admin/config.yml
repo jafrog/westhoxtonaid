@@ -14,3 +14,15 @@ collections:
       - { name: title, label: Title, widget: string }
       - { name: position, label: Position, widget: number, default: 0, valueType: "int" }
       - { name: body, label: Body, widget: markdown }
+  - name: resources
+    label: Resources
+    folder: resources
+    create: true
+    fields:
+      - { name: page, label: Page, widget: select, options: ["Home", "Volunteer", "Get help", "Health & Safety", "More support", "Contact us", "About us"] }
+      - { name: section, label: Section, widget: string }
+      - { name: position, label: Position, widget: number, default: 0, valueType: "int" }
+      - { name: title, label: Title, widget: string }
+      - { name: body, label: Text, widget: string }
+      - { name: website, label: Website, widget: string }
+      - { name: phone, label: Phone, widget: string }

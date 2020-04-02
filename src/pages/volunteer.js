@@ -1,5 +1,5 @@
 import React from "react"
-import { 
+import {
   Row,
   Col,
   Button,
@@ -99,20 +99,41 @@ const VolunteerPage = () => {
           nodes {
             publicURL
           }
+      }
+      allMarkdownRemark(filter: { frontmatter: { page: { eq: "Home" } } }) {
+        edges {
+          node {
+            html
+            frontmatter {
+              title
+              position
+              section
+              title
+              website
+              phone
+            }
+            parent {
+              id
+              ... on File {
+                sourceInstanceName
+              }
+            }
+          }
         }
       }
+    }
   `)
-    
+
     return (
       <Layout>
         <SEO title="Volunteer" />
-        
+
         <Row>
           <Col>
             <h1 className="display-4">I want to volunteer</h1>
           </Col>
         </Row>
-        
+
         <Row className="mb-5">
           <Col xs={12} md={8}>
             <p className="lead">
@@ -128,18 +149,18 @@ const VolunteerPage = () => {
           <Col xs={12} md={4} className="d-flex justify-content-center align-items-center mt-3 mt-md-0">
             <Button
               href="https://forms.gle/yMZGT5m2irvLpnxe7"
-              target="_blank" rel="noopener noreferrer" 
+              target="_blank" rel="noopener noreferrer"
               className="d-flex align-items-center btn-lg btn-primary px-4 py-3">
               <FaClipboard className="mr-1" />
               Register to volunteer
             </Button>
           </Col>
         </Row>
-        
+
         <Row className="mb-5">
           <Col xs={12}>
             <h2 className="mb-3">Completing assistance requests</h2>
-            
+
             <p>
               In line with the government guidelines of minimising your time outdoors, please only run assistance requests in conjunction with your own errands or exercise time.
             </p>
@@ -148,20 +169,20 @@ const VolunteerPage = () => {
                 width: "2rem",
                 fontSize: "1.25rem",
               }} className="mr-3" />
-              For errands please make sure you are following the  
+              For errands please make sure you are following the
               <Link to="/health" className="ml-1"> safety advice </Link>
             </Alert>
           </Col>
         </Row>
-        
+
         <Row>
           <Col xs={12}>
             <h2>Keep up-to-date via social media</h2>
           </Col>
         </Row>
-        
+
         <Social />
-        
+
         <Row className="mb-5">
           <Col xs={12} lg={6} className="mb-3">
             <div style={{width: "400px"}}>
@@ -178,7 +199,7 @@ const VolunteerPage = () => {
                       variant="outline-secondary"
                       href={link.href}
                       className="d-flex align-items-center justify-content-center mb-3"
-                      target="_blank" rel="noopener noreferrer" 
+                      target="_blank" rel="noopener noreferrer"
                       key={index}>
                       <FaWhatsapp className="mr-1"/>
                       {link.area}
@@ -189,13 +210,13 @@ const VolunteerPage = () => {
             </Row>
           </Col>
         </Row>
-        
+
         <Row>
           <Col xs={12}>
             <h2>Other ways to help</h2>
           </Col>
         </Row>
-        
+
         <Row>
           <Col xs={12}>
             <ResourceCards resources={resources} perRow={3}/>

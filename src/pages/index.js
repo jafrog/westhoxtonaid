@@ -32,6 +32,12 @@ const IndexPage = () => {
               title
               position
             }
+            parent {
+              id
+              ... on File {
+                sourceInstanceName
+              }
+            }
           }
         }
       }
@@ -41,6 +47,7 @@ const IndexPage = () => {
   const sections = data
     .allMarkdownRemark
     .edges
+    .filter((edge) => (edge.node.parent.sourceInstanceName === "markdown-pages"))
     .sort((s1, s2) => ( s1.node.frontmatter.position - s2.node.frontmatter.position ))
 
   return (
@@ -84,7 +91,7 @@ const IndexPage = () => {
       </Row>
 
       {sections.map((section, i) => (
-        <Section section={section.node} />
+        <Section section={section.node} key={i} />
       ))}
 
       <Row className="mb-5 mt-n5">
