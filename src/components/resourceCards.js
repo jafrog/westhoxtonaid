@@ -15,15 +15,23 @@ Array.prototype.eachSlice = function (size){
   return this.arr
 }
 
-const ResourceCards = ({ resources, perRow }) => (
+const ResourceCards = ({ section, resources, perRow }) => (
   <>
+  {section !== null && section !== "" ? (
+    <Row className="mt-5">
+      <Col xs={12}>
+        <h2>{section}</h2>
+      </Col>
+    </Row>
+  ) : ""}
+
   {resources.eachSlice(perRow).map((slice, index) => (
     <Row key={index}>
       {slice.map((link, index) => (
         <Col xs={12} lg={12/perRow} key={index} className="mb-5">
           <ResourceCard
             title={link.title}
-            text={link.text}
+            html={link.html}
             website={link.website}
             phone={link.phone}
           />
@@ -35,9 +43,10 @@ const ResourceCards = ({ resources, perRow }) => (
 )
 
 ResourceCards.propTypes = {
+  section: PropTypes.string,
   resources: PropTypes.arrayOf(PropTypes.shape({
     title: PropTypes.string,
-    text: PropTypes.string,
+    html: PropTypes.string,
     website: PropTypes.string,
     phone: PropTypes.string,
   })),

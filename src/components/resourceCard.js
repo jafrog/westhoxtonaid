@@ -7,15 +7,15 @@ import {
 } from "react-bootstrap"
 import { FaGlobe, FaPhone } from 'react-icons/fa'
 
-const ResourceCard = ({ title, text, website, phone }) => {
+const ResourceCard = ({ title, html, website, phone }) => {
   return (
     <Card className="h-100">
       <Card.Body className="mb-5">
         <Card.Title className="mb-5">{title}</Card.Title>
-        
-        <Card.Text>{text}</Card.Text>
+
+        <Card.Text dangerouslySetInnerHTML={{ __html: html }} />
       </Card.Body>
-      
+
       <Card.Footer>
         <Row>
           {website ? (
@@ -26,7 +26,7 @@ const ResourceCard = ({ title, text, website, phone }) => {
             </Card.Link>
           </Col>
         ) : ""}
-          
+
           {phone ? (
           <Col xs={12} className="mt-1">
             <Card.Link href="tel:{phone}">
@@ -43,7 +43,7 @@ const ResourceCard = ({ title, text, website, phone }) => {
 
 ResourceCard.propTypes = {
   title: PropTypes.string,
-  text: PropTypes.string,
+  html: PropTypes.string,
   website: PropTypes.string,
   phone: PropTypes.string,
 }

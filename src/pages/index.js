@@ -15,6 +15,7 @@ import SEO from "../components/seo"
 import Map from "../components/map"
 import Contact from "../components/contact"
 import Section from "../components/section"
+import { extractSections } from "../components/helpers"
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
@@ -44,11 +45,7 @@ const IndexPage = () => {
     }
   `)
 
-  const sections = data
-    .allMarkdownRemark
-    .edges
-    .filter((edge) => (edge.node.parent.sourceInstanceName === "markdown-pages"))
-    .sort((s1, s2) => ( s1.node.frontmatter.position - s2.node.frontmatter.position ))
+  const sections = extractSections(data)
 
   return (
     <Layout>

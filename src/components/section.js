@@ -10,11 +10,13 @@ const Section = ({ section }) => {
 
   return (
     <>
-      <Row>
-        <Col xs={12}>
-          <h2>{frontmatter.title}</h2>
-        </Col>
-      </Row>
+      {frontmatter.title !== null && frontmatter.title !== "" ? (
+        <Row>
+          <Col xs={12}>
+            <h2>{frontmatter.title}</h2>
+          </Col>
+        </Row>
+      ) : ""}
 
       <Row className="mb-5">
         <Col dangerouslySetInnerHTML={{ __html: html }}>

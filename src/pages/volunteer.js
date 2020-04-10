@@ -18,6 +18,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import ResourceCards from "../components/resourceCards"
 import Social from "../components/social"
+import { extractResources } from "../components/helpers"
 
 const areaWhatsapps = [
   {
@@ -62,29 +63,6 @@ const areaWhatsapps = [
   },
 ]
 
-const resources = [
-  {
-    title: "Hackney foodbank",
-    text: "Needs donation of supplies urgently! Donate goods to Florence Bennett Centre, Cherbury St, N1 6TL between 9am-12pm Mon-Thu. Or sign-up to a volunteer shift via the link below",
-    website: "https://hackneyfoodbank.simplybook.it/v2/#book/count/1/"
-  },
-  {
-    title: "Made in Hackney",
-    text: "Donate towards their crowdfunder to supply vulnerable community members with free food delivered to their door",
-    website: "https://www.crowdfunder.co.uk/made-in-hackney-4"
-  },
-  {
-    title: "Good Gym",
-    text: "Organisation that helps those in need, providing social and practical support to those isolated. Still taking on new volunteers, sign-up via the link",
-    website: "https://www.goodgym.org"
-  },
-  {
-    title: "Dare to Care Packages",
-    text: "Donate items that will be used to make up care packages or volunteer to help with their logisitics",
-    website: "https://daretocarepackages.com/"
-  },
-]
-
 const VolunteerPage = () => {
   const data = useStaticQuery(graphql`
     query {
@@ -100,7 +78,7 @@ const VolunteerPage = () => {
             publicURL
           }
       }
-      allMarkdownRemark(filter: { frontmatter: { page: { eq: "Home" } } }) {
+      allMarkdownRemark(filter: { frontmatter: { page: { eq: "Volunteer" } } }) {
         edges {
           node {
             html
@@ -108,7 +86,6 @@ const VolunteerPage = () => {
               title
               position
               section
-              title
               website
               phone
             }
@@ -124,38 +101,40 @@ const VolunteerPage = () => {
     }
   `)
 
-    return (
-      <Layout>
-        <SEO title="Volunteer" />
+  const resources = extractResources(data)
 
-        <Row>
-          <Col>
-            <h1 className="display-4">I want to volunteer</h1>
-          </Col>
-        </Row>
+  return (
+    <Layout>
+      <SEO title="Volunteer" />
 
-        <Row className="mb-5">
-          <Col xs={12} md={8}>
-            <p className="lead">
-              All volunteers that would like to help out please fill in your details
-            </p>
-            <p>
-              By registering your details as a volunteer will help us to match any requests that come through and identify areas that may need extra support.
-            </p>
-            <p>
-              To download our leaflets click <a target="_blank" rel="noopener noreferrer" href={data.allFile.nodes[0]["publicURL"]}>here</a>.
-            </p>
-          </Col>
-          <Col xs={12} md={4} className="d-flex justify-content-center align-items-center mt-3 mt-md-0">
-            <Button
-              href="https://forms.gle/yMZGT5m2irvLpnxe7"
-              target="_blank" rel="noopener noreferrer"
-              className="d-flex align-items-center btn-lg btn-primary px-4 py-3">
-              <FaClipboard className="mr-1" />
-              Register to volunteer
-            </Button>
-          </Col>
-        </Row>
+      <Row>
+        <Col>
+          <h1 className="display-4">I want to volunteer</h1>
+        </Col>
+      </Row>
+
+      <Row className="mb-5">
+        <Col xs={12} md={8}>
+          <p className="lead">
+            All volunteers that would like to help out please fill in your details
+          </p>
+          <p>
+            By registering your details as a volunteer will help us to match any requests that come through and identify areas that may need extra support.
+          </p>
+          <p>
+            To download our leaflets click <a target="_blank" rel="noopener noreferrer" href={data.allFile.nodes[0]["publicURL"]}>here</a>.
+          </p>
+        </Col>
+        <Col xs={12} md={4} className="d-flex justify-content-center align-items-center mt-3 mt-md-0">
+          <Button
+            href="https://forms.gle/yMZGT5m2irvLpnxe7"
+            target="_blank" rel="noopener noreferrer"
+            className="d-flex align-items-center btn-lg btn-primary px-4 py-3">
+            <FaClipboard className="mr-1" />
+            Register to volunteer
+          </Button>
+        </Col>
+      </Row>
 
         <Row className="mb-5">
           <Col xs={12}>
