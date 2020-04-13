@@ -4,7 +4,7 @@ import {
   Col,
   Button
 } from "react-bootstrap"
-import { Link, useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 import {
   FaClipboard,
   FaHeart
@@ -15,7 +15,8 @@ import SEO from "../components/seo"
 import Map from "../components/map"
 import Contact from "../components/contact"
 import Section from "../components/section"
-import { extractSections } from "../components/helpers"
+import ResourceCards from "../components/resourceCards"
+import { extractSections, extractResources } from "../components/helpers"
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
@@ -32,6 +33,10 @@ const IndexPage = () => {
             frontmatter {
               title
               position
+              section
+              website
+              phone
+              style
             }
             parent {
               id
@@ -46,6 +51,7 @@ const IndexPage = () => {
   `)
 
   const sections = extractSections(data)
+  const resources = extractResources(data)
 
   return (
     <Layout>
@@ -111,6 +117,12 @@ const IndexPage = () => {
       </Row>
 
       <Contact />
+
+      <Row>
+        <Col xs={12}>
+          <ResourceCards resources={resources} perRow={3}/>
+        </Col>
+      </Row>
 
     </Layout>
     )

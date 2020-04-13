@@ -2,7 +2,6 @@ import React from "react"
 import {
   Row,
   Col,
-  Card,
   Button
 } from "react-bootstrap"
 import {
@@ -24,7 +23,7 @@ const Social = () => (
         Facebook
       </Button>
     </Col>
-    <Col xs={12} sm={3} className="px-3 d-flex justify-content-center mb-3">  
+    <Col xs={12} sm={3} className="px-3 d-flex justify-content-center mb-3">
       <Button
         href="https://chat.whatsapp.com/ExfTKM1Cpdz9V9o9nWRDnX"
         variant="secondary"

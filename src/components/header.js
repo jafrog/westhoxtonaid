@@ -1,7 +1,6 @@
 import { Link } from "gatsby"
 import React from "react"
-import { 
-  Button,
+import {
   Navbar  
 } from "react-bootstrap"
 
@@ -9,7 +8,7 @@ const Header = () => (
   <header>
     <Navbar variant="dark" expand="md" className="py-5">
       <Navbar.Toggle aria-controls="navbarToggler" />
-      
+
       <Navbar.Collapse id="navbarToggler" className="justify-content-center">
         <ul className="navbar-nav justify-content-between">
           <li className="nav-item">
@@ -20,7 +19,7 @@ const Header = () => (
               Home
             </Link>
           </li>
-          
+
           <li className="nav-item">
             <Link
               className="nav-link"
@@ -29,7 +28,7 @@ const Header = () => (
               Volunteer
             </Link>
           </li>
-          
+
           <li className="nav-item">
             <Link
               className="nav-link"
@@ -38,7 +37,7 @@ const Header = () => (
               Get help
             </Link>
           </li>
-          
+
           <li className="nav-item">
             <Link
               className="nav-link"
@@ -47,7 +46,7 @@ const Header = () => (
               Health & safety
             </Link>
           </li>
-          
+
           <li className="nav-item">
             <Link
               className="nav-link"
@@ -56,7 +55,7 @@ const Header = () => (
               More support
             </Link>
           </li>
-          
+
           <li className="nav-item">
             <Link
               className="nav-link"
@@ -65,7 +64,7 @@ const Header = () => (
               Contact us
             </Link>
           </li>
-          
+
           <li className="nav-item">
             <Link
               className="nav-link"

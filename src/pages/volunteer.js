@@ -3,22 +3,20 @@ import {
   Row,
   Col,
   Button,
-  Alert
 } from "react-bootstrap"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import {
   FaClipboard,
   FaWhatsapp,
-  FaExclamationTriangle,
 } from "react-icons/fa"
-import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import ResourceCards from "../components/resourceCards"
 import Social from "../components/social"
-import { extractResources } from "../components/helpers"
+import Section from "../components/section"
+import { extractSections, extractResources } from "../components/helpers"
 
 const areaWhatsapps = [
   {
@@ -88,6 +86,7 @@ const VolunteerPage = () => {
               section
               website
               phone
+              style
             }
             parent {
               id
@@ -102,6 +101,7 @@ const VolunteerPage = () => {
   `)
 
   const resources = extractResources(data)
+  const sections = extractSections(data)
 
   return (
     <Layout>
@@ -136,71 +136,57 @@ const VolunteerPage = () => {
         </Col>
       </Row>
 
-        <Row className="mb-5">
-          <Col xs={12}>
-            <h2 className="mb-3">Completing assistance requests</h2>
+      {sections.map((section, i) => (
+        <Section section={section.node} key={i} />
+      ))}
 
-            <p>
-              In line with the government guidelines of minimising your time outdoors, please only run assistance requests in conjunction with your own errands or exercise time.
-            </p>
-            <Alert variant="warning" className="d-flex align-items-center">
-              <FaExclamationTriangle style={{
-                width: "2rem",
-                fontSize: "1.25rem",
-              }} className="mr-3" />
-              For errands please make sure you are following the
-              <Link to="/health" className="ml-1"> safety advice </Link>
-            </Alert>
-          </Col>
-        </Row>
+      <Row>
+        <Col xs={12}>
+          <h2>Keep up-to-date via social media</h2>
+        </Col>
+      </Row>
 
-        <Row>
-          <Col xs={12}>
-            <h2>Keep up-to-date via social media</h2>
-          </Col>
-        </Row>
+      <Social />
 
-        <Social />
+      <Row className="mb-5">
+        <Col xs={12} lg={6} className="mb-3">
+          <div style={{width: "400px"}}>
+            <Img fluid={data.mapImage.childImageSharp.fluid} />
+          </div>
+        </Col>
+        <Col xs={12} lg={6}>
+          <p>Join your street area WhatsApp group to get notified on assistance requests in your area that you could help out with</p>
+          <Row>
+            {areaWhatsapps.eachSlice(5).map((slice, index) => (
+              <Col xs={12} sm={6} key={index}>
+                {slice.map((link, index) => (
+                  <Button
+                    variant="outline-secondary"
+                    href={link.href}
+                    className="d-flex align-items-center justify-content-center mb-3"
+                    target="_blank" rel="noopener noreferrer"
+                    key={index}>
+                    <FaWhatsapp className="mr-1"/>
+                    {link.area}
+                  </Button>
+                ))}
+              </Col>
+            ))}
+          </Row>
+        </Col>
+      </Row>
 
-        <Row className="mb-5">
-          <Col xs={12} lg={6} className="mb-3">
-            <div style={{width: "400px"}}>
-              <Img fluid={data.mapImage.childImageSharp.fluid} />
-            </div>
-          </Col>
-          <Col xs={12} lg={6}>
-            <p>Join your street area WhatsApp group to get notified on assistance requests in your area that you could help out with</p>
-            <Row>
-              {areaWhatsapps.eachSlice(5).map((slice, index) => (
-                <Col xs={12} sm={6} key={index}>
-                  {slice.map((link, index) => (
-                    <Button
-                      variant="outline-secondary"
-                      href={link.href}
-                      className="d-flex align-items-center justify-content-center mb-3"
-                      target="_blank" rel="noopener noreferrer"
-                      key={index}>
-                      <FaWhatsapp className="mr-1"/>
-                      {link.area}
-                    </Button>
-                  ))}
-                </Col>
-              ))}
-            </Row>
-          </Col>
-        </Row>
+      <Row>
+        <Col xs={12}>
+          <h2>Other ways to help</h2>
+        </Col>
+      </Row>
 
-        <Row>
-          <Col xs={12}>
-            <h2>Other ways to help</h2>
-          </Col>
-        </Row>
-
-        <Row>
-          <Col xs={12}>
-            <ResourceCards resources={resources} perRow={3}/>
-          </Col>
-        </Row>
+      <Row>
+        <Col xs={12}>
+          <ResourceCards resources={resources} perRow={3}/>
+        </Col>
+      </Row>
     </Layout>
   )
 }

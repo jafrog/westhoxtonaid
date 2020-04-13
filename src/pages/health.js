@@ -24,6 +24,7 @@ const HealthPage = () => {
               section
               website
               phone
+              style
             }
             parent {
               id

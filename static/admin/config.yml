@@ -10,7 +10,7 @@ collections:
     label: Content Sections
     folder: content
     create: true
-    summary: "{{page}} {{title}} {{body}}"
+    summary: "Section #{{position}} on {{page}}\n Heading: {{title}}"
     fields:
       - name: page
         label: Page
@@ -19,6 +19,7 @@ collections:
       - { name: title, label: Title, widget: string }
       - { name: position, label: Position, widget: number, default: 0, valueType: "int" }
       - { name: body, label: Body, widget: markdown }
+      - { name: style, label: Style, widget: select, options: ["info", "warning"]}
   - name: resources
     identifier_field: "{{page}}_{{position}}"
     label: Resources

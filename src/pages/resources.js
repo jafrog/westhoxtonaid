@@ -24,6 +24,7 @@ const ResourcesPage = () => {
               section
               website
               phone
+              style
             }
             parent {
               id
@@ -61,9 +62,7 @@ const ResourcesPage = () => {
 
       {Object.entries(resources).map(entry => {
         const section = entry[0]
-        console.log(section)
         const resources = entry[1]
-        console.log(resources)
         return (
           <ResourceCards
             section={section}
