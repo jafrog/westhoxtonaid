@@ -13,7 +13,9 @@ const ResourceCard = ({ title, html, website, phone }) => {
       <Card.Body className="mb-5">
         <Card.Title className="mb-5">{title}</Card.Title>
 
-        <Card.Text dangerouslySetInnerHTML={{ __html: html }} />
+        <Card.Text>
+          <span dangerouslySetInnerHTML={{ __html: html }}></span>
+        </Card.Text>
       </Card.Body>
 
       <Card.Footer>

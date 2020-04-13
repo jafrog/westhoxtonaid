@@ -60,7 +60,7 @@ const ResourcesPage = () => {
         <Section section={section.node} key={i} />
       ))}
 
-      {Object.entries(resources).map(entry => {
+      {Object.entries(resources).map((entry, i) => {
         const section = entry[0]
         const resources = entry[1]
         return (
@@ -68,6 +68,7 @@ const ResourcesPage = () => {
             section={section}
             resources={resources}
             perRow={3}
+            key={i}
             />
         )
       })}
