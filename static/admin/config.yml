@@ -10,8 +10,12 @@ collections:
     label: Content Sections
     folder: content
     create: true
+    summary: "{{page}} {{title}} {{body}}"
     fields:
-      - { name: page, label: Page, widget: select, options: ["Home", "Volunteer", "Get help", "Health & Safety", "More support", "Contact us", "About us"] }
+      - name: page
+        label: Page
+        widget: select
+        options: ["Home", "Volunteer", "Get help", "Health & Safety", "More support", "Contact us", "About us"]
       - { name: title, label: Title, widget: string }
       - { name: position, label: Position, widget: number, default: 0, valueType: "int" }
       - { name: body, label: Body, widget: markdown }
@@ -20,6 +24,7 @@ collections:
     label: Resources
     folder: resources
     create: true
+    summary: "{{page}} {{section}} {{title}}"
     fields:
       - { name: page, label: Page, widget: select, options: ["Home", "Volunteer", "Get help", "Health & Safety", "More support", "Contact us", "About us"] }
       - { name: position, label: Position, widget: number, default: 0, valueType: "int" }
