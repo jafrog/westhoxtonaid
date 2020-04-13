@@ -29,7 +29,7 @@ collections:
     fields:
       - { name: page, label: Page, widget: select, options: ["Home", "Volunteer", "Get help", "Health & Safety", "More support", "Contact us", "About us"] }
       - { name: position, label: Position, widget: number, default: 0, valueType: "int" }
-      - { name: title, label: Title, widget: string] }
+      - { name: title, label: Title, widget: string }
       - { name: section, label: Section, widget: string }
       - { name: body, label: Text, widget: string }
       - { name: website, label: Website, widget: string, required: false }
