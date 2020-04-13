@@ -7,6 +7,7 @@ public_folder: /assets
 collections:
   - name: content
     identifier_field: "{{page}}_{{position}}"
+    slug: "{{page}}_{{position}}_{{title}}"
     label: Content Sections
     folder: content
     create: true
@@ -22,6 +23,7 @@ collections:
       - { name: style, label: Style, widget: select, options: ["info", "warning"], required: false}
   - name: resources
     identifier_field: "{{page}}_{{position}}"
+    slug: "{{page}}_{{section}}_{{position}}_{{title}}"
     label: Resources
     folder: resources
     create: true
