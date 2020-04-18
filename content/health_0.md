@@ -1,13 +1,27 @@
 ---
 page: Health & Safety
-title: 'Safety, Logisitics and Data Guidance'
+title: ''
 position: 0
 style: null
 ---
-We ask all our volunteers to operate in accordance with strict hygiene, data protection, payment and safeguarding protocol when carrying out assistance work. One of our coordinators goes through this protocol with all volunteers before they carry out any task. 
+We ask all our volunteers to operate in accordance with strict hygiene, data protection, payment and safeguarding protocol when carrying out assistance work. Our complete guidance document can be read here: <!--StartFragment-->
 
-#### Our complete Guidance Document, which includes logistics for carrying out requests and health and safety protocols, can be viewed here: <!--StartFragment-->
+**[Complete Guidance Document](https://docs.google.com/document/d/1QVs4MYPl9AfLSI50sbSmUCNUkFIA72LVAr-iC7976s0/edit#)**
 
-<file://ad.ucl.ac.uk/homei/sejjooi/Documents/HWMA/HoxtonWest%20Logistics,%20Safeguarding%20and%20HealthSafety.pdf>
+<!--EndFragment-->
+
+One of our coordinators goes through this protocol with all volunteers before they carry out any task. 
+
+To view our protocol for each errand just click below:
+
+<!--StartFragment-->
+
+**[Leafleting and Postering](https://docs.google.com/document/d/1qHyQQ2qUMLpSzQ7sBBpQd65fJoZ6CjANd8rLG5P1CHk/edit?usp=sharing)**
+
+<!--EndFragment-->
+
+<!--StartFragment-->
+
+**[Handling Payments](https://docs.google.com/document/d/1P41oaOVWiUus4i8m6b6X9aLNcg0QeJA4hW5prYX6qeM/edit?usp=sharing)**
 
 <!--EndFragment-->
