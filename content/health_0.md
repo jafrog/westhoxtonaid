@@ -4,9 +4,11 @@ title: ''
 position: 0
 style: null
 ---
-**We ask all our volunteers to operate in accordance with strict hygiene, data protection, payment and safeguarding protocol when carrying out assistance work. All this information can be found in our complete guide below.**  <!--StartFragment-->
+**We ask all our volunteers to operate in accordance with strict hygiene, data protection, payment and safeguarding protocol when carrying out assistance work. All this information can be found in our complete guide below.** 
 
-[Complete Guidance Document](https://docs.google.com/document/d/1QVs4MYPl9AfLSI50sbSmUCNUkFIA72LVAr-iC7976s0/edit#)
+<!--StartFragment-->
+
+**[Complete Guidance Document](https://docs.google.com/document/d/e/2PACX-1vQ_GrYK6MLRvxtVWNLgwLz1TbeKV_4JwiPtqoIZtVHqqSHvzbectZo8AD7e-IFq6CDXXQrTkUPpxau-/pub)**
 
 <!--EndFragment-->
 
