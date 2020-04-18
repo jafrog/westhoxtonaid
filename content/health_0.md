@@ -25,3 +25,9 @@ To view our protocol for each errand just click below:
 **[Handling Payments](https://docs.google.com/document/d/1P41oaOVWiUus4i8m6b6X9aLNcg0QeJA4hW5prYX6qeM/edit?usp=sharing)**
 
 <!--EndFragment-->
+
+<!--StartFragment-->
+
+**[test](https://docs.google.com/document/d/e/2PACX-1vTgHVojNhojQwsDUmVOK9BE509HFjlg7GRblaVR68OCylyGH5qgsglXGLt9FoaFOvW5ZcyImjmidIIY/pub)**
+
+<!--EndFragment-->
