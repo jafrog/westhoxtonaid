@@ -1,9 +1,9 @@
 ---
 page: More support
 position: 14
-title: Dare to Care (not launched yet)
+title: Hackney Free Meals
 section: Emergency food
-website: 'https://daretocarepackages.com/pre-order/'
+website: 'https://tinyurl.com/ycjjgn52'
 phone: ''
 ---
-Will soon be able to provide care packages (food and sanitary items) to those in need
+An up-to-date list of organisations offering free meals and food parcels for those in need for pick-up and/or delivery services. Most accept self-referral and do not set criteria for who qualifies for free meals. If you need  support, whatever your situation, please try here. 
