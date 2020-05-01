@@ -1,9 +1,9 @@
 ---
 page: Volunteer
-section: Other ways to help
 position: 3
-title: Dare to Care Packages
-website: https://daretocarepackages.com/
-phone: ""
+title: Food For All
+section: Other ways to help
+website: 'https://foodforalluk.com/volunteer/'
+phone: ''
 ---
-Donate items that will be used to make up care packages or volunteer to help with their logisitics
+Volunteer to help prepare and package meals for those in need. Also opportunities to help with distrubution, either at food hubs or via delivery if you have a car/bike.
