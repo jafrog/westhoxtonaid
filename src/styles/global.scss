@@ -1,9 +1,201 @@
 @import "custom";
+@import "fonts";
 @import "~bootstrap/scss/bootstrap";
 
-body {
-  background: linear-gradient(180deg, rgba(56,78,122,1) 0%, rgba(47,72,88,1) 100%);
-  min-height: 100vh;
+/* Typography */
+/* ========== */
+
+h1 {
+  font-size: 55px;
+  line-height: 65px;
+
+  &.purple {
+    color: $purple-darkest;
+  }
+}
+
+h2 {
+  font-size: 36px;
+  line-height: 44px;
+
+  &.purple {
+    color: $purple-darkest;
+  }
+
+  &.light {
+    color: $yellow-grey-light;
+  }
+}
+
+h3 {
+  font-family: $font-family-light;
+  font-size: 26px;
+  line-height: 32px;
+
+  &.alt {
+    font-family: $headings-font-family;
+    font-weight: regular;
+  }
+}
+
+p {
+  font-family: $font-family-light;
+  font-size: 20px;
+  line-height: 26px;
+
+  &.pink {
+    color: $pink;
+  }
+
+  &.bold {
+    font-family: $font-family-sans-serif;
+    font-weight: bold;
+  }
+}
+
+h6 {
+  font-family: $font-family-light;
+  font-size: 16px;
+  line-height: 22px;
+  color: $grey;
+
+  &.pink {
+    color: $pink;
+    font-size: 20px;
+  }
+
+  &.light {
+    color: $yellow-grey-light;
+  }
+}
+
+a {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: $font-family-condensed;
+  line-height: 22px;
+  color: $pink;
+
+  &.light {
+    color: $yellow-grey-light;
+  }
+
+  &.thin {
+    font-family: $font-family-light;
+    color: $grey-dark;
+  }
+}
+
+small {
+  font-family: $font-family-light;
+  font-size: 12px;
+  line-height: 16px;
+
+  &.light {
+    color: $yellow-grey-light;
+  }
+}
+
+/* ========== */
+
+/* Navbar */
+/* ========== */
+
+.nav-item {
+  .nav-link {
+    font-family: $font-family-sans-serif;
+    font-size: 18px;
+    line-height: 20px;
+  }
+
+  .underline {
+    height: 1px;
+	  background-color: $yellow-grey-light;
+	  transition: width 0.2s, background-color 0.5s;
+	  margin: 10px auto;
+  }
+
+  a.active + .underline {
+	  width: 100%;
+	  background-color: $pink;
+  }
+
+  &.social {
+    .nav-link {
+      padding-left: 4px;
+      padding-right: 4px;
+      display: inline-block;
+
+      &.twitter {
+        padding-left: $spacer*2;
+      }
+    }
+
+    &:hover {
+      .underline {
+        background-color: $yellow-grey-light;
+      }
+    }
+  }
+
+  &.home {
+    .underline {
+      width: 0;
+    }
+  }
+
+  &:hover {
+    .nav-link {
+      color: $pink;
+
+      &:hover {
+        color: $pink;
+      }
+    }
+
+    .underline {
+	    background-color: $pink;
+	    width: 100%;
+    }
+  }
+}
+
+/* @include media-breakpoint-down(sm) { */
+/*   .nav-item .underline { */
+/*     display: none; */
+/*   } */
+/* } */
+
+/* ========== */
+
+.wrapper {
+  background:
+    linear-gradient(hsla(0,100,86, 0.5), hsla(0,100,86, 0.5));
+  background-size:
+    100% 80vh;
+  background-repeat: no-repeat;
+
+  &.index {
+    background:
+      linear-gradient(hsla(0,100,86, 0.5), hsla(0,100,86, 0.5));
+    background-size:
+      100% 80vh;
+    background-repeat: no-repeat;
+  }
+
+  &.index::after {
+    content: "";
+    background: url("../assets/index_background.png");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    opacity: 0.8;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+  }
 }
 
 .card-title {
@@ -12,14 +204,6 @@ body {
 
 .map {
   min-height: 400px;
-}
-
-.nav-link {
-  font-size: 20px;
-}
-
-.title {
-  color: $red;
 }
 
 .heart-emoji {

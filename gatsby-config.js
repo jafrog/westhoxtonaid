@@ -22,8 +22,15 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `flies`,
+        name: `files`,
         path: `${__dirname}/src/files`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `fonts`,
+        path: `${__dirname}/src/fonts`,
       },
     },
     `gatsby-transformer-sharp`,
@@ -37,7 +44,7 @@ module.exports = {
         background_color: `#2F4858`,
         theme_color: `#E03616`,
         display: `minimal-ui`,
-        icon: `src/images/favicon.png`, // This path is relative to the root of the site.
+        icon: `src/assets/favicon.png`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-netlify-cms`,
@@ -55,7 +62,7 @@ module.exports = {
         path: `${__dirname}/resources`,
       },
     },
-    `gatsby-transformer-remark`
+    `gatsby-transformer-remark`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

@@ -1,31 +1,56 @@
-$font-family-sans-serif: 'Work Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
-$headings-font-family: 'Work Sans', sans-serif;
+$font-family-sans-serif: 'DINNextLTPro-Regular', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$headings-font-family: 'Arial Black', sans-serif;
+$font-family-light: "DINNextLTPro-Light", sans-serif;
+$font-family-condensed: "DINNextLTPro-Condensed", sans-serif;
 
 $spacer: 1.25rem;
-$line-height-base: 1.75;
-$font-size-base: 1.25rem;
 
-$red: #E03616;
-$red-pink: #D21A5A;
-$pink-purple: #A53782;
-$purple: #694A8D;
-$medium-blue: #384E7A;
-$dark-blue: #2F4858;
+
+$pink: #E25466;
+$pink-light: #FFB9B9;
+$pink-lighter: #FFCCD2;
+$pink-lightest: #FFE6E6;
+
+$purple-darkest: #2F2E41;
+$purple-dark: #3F3D56;
+$purple: #666699;
+$purple-light: #BFB8E6;
+$purple-lighter: #CAC3E5;
+$purple-lightest: #E7E5FF;
+$purple-grey: #CACBD4;
+$purple-grey-light: #E1E1E9;
+
+$yellow: #F2D686;
+$yellow-light: #FFF8E5;
+$yellow-grey-light: #F0EBDF;
+
+$grey-dark: #465056;
+$grey: #7F807F;
+$grey-light: #E6E6E6;
 
 $theme-colors: (
-  "primary": #E03616,
-  "secondary": #F6AE2D,
-  "light": #fff,
-  "dark": #2F4858,
+  "primary": $pink,
+  "secondary": $purple,
+  "light": $grey-light,
+  "dark": $grey-dark,
 );
 
-$body-bg: $medium-blue;
-$body-color: #fff;
+$body-bg: $grey-light;
+$body-color: $grey-dark;
 
-$navbar-nav-link-padding-x: 1rem;
 $headings-margin-bottom: $spacer * 3;
 
-$card-color: #212529;
+$card-color: $purple-grey-light;
 $card-spacer-y: 1.25rem;
 
-$link-color: hsl(9.5,100%,50%);
+$link-color: $pink;
+
+/* Navbar */
+/* ====== */
+
+$navbar-nav-link-padding-x: 1rem;
+
+$navbar-dark-color: $grey-dark;
+$navbar-dark-active-color: $grey-dark;
+
+/* ====== */

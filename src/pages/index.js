@@ -18,7 +18,7 @@ import Section from "../components/section"
 import ResourceCards from "../components/resourceCards"
 import { extractSections, extractResources } from "../components/helpers"
 
-const IndexPage = () => {
+const IndexPage = ({ path }) => {
   const data = useStaticQuery(graphql`
     {
       allFile(filter: { name: { eq: "flyers" } }) {
@@ -54,15 +54,13 @@ const IndexPage = () => {
   const resources = extractResources(data)
 
   return (
-    <Layout>
+    <Layout location={path}>
       <SEO title="Home" />
 
       <Row>
         <Col xs={12} className="d-flex justify-content-center">
-          <h1 className="display-3 mb-3 title">
-            <span className="heart-emoji" role="img" aria-label="Heart emoji">❤️ </span>
+          <h1 className="mb-3 purple">
             West Hoxton Mutual Aid
-            <span className="heart-emoji" role="img" aria-label="Heart emoji"> ❤️</span>
           </h1>
         </Col>
       </Row>

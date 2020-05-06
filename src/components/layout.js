@@ -1,17 +1,18 @@
 import React from "react"
 import PropTypes from "prop-types"
-import Helmet from "react-helmet"
 
 import Header from "./header"
 
 import '../styles/global.scss'
 
-const Layout = ({ children }) => {
+const Layout = ({ location, children }) => {
+  var page = (location || "").split("/")[1]
+  if (page === "") {
+    page = "index"
+  }
+
   return (
-    <>
-      <Helmet>
-        <link href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap" rel="stylesheet" />
-      </Helmet>
+    <div className={`wrapper ${page}`}>
       <Header/>
       <main style={{ minHeight: "100vh" }}>
         <div className="container">
@@ -23,7 +24,7 @@ const Layout = ({ children }) => {
         {` `}
         <a href="https://www.gatsbyjs.org">Gatsby</a>
       </footer>
-    </>
+    </div>
   )
 }
 
