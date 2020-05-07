@@ -3,11 +3,12 @@ import React from "react"
 import {
   Navbar
 } from "react-bootstrap"
-
-import twitterIcon from "../assets/twitter_icon.svg"
-import facebookIcon from "../assets/facebook_icon.svg"
-import instagramIcon from "../assets/instagram_icon.svg"
-import whatsappIcon from "../assets/whatsapp_icon.svg"
+import {
+  FaFacebookF,
+  FaWhatsapp,
+  FaTwitter,
+  FaInstagram,
+} from "react-icons/fa"
 
 const Header = () => (
   <header>
@@ -92,7 +93,7 @@ const Header = () => (
               target="_blank" rel="noopener noreferrer"
               className="nav-link twitter"
             >
-              <img src={twitterIcon} alt="Twitter" />
+              <FaTwitter/>
             </a>
 
             <a
@@ -100,7 +101,7 @@ const Header = () => (
               target="_blank" rel="noopener noreferrer"
               className="nav-link"
             >
-              <img src={facebookIcon} alt="Facebook" />
+              <FaFacebookF/>
             </a>
 
             <a
@@ -108,7 +109,7 @@ const Header = () => (
               target="_blank" rel="noopener noreferrer"
               className="nav-link"
             >
-              <img src={instagramIcon} alt="Instagram" />
+              <FaInstagram/>
             </a>
 
             <a
@@ -116,7 +117,7 @@ const Header = () => (
               target="_blank" rel="noopener noreferrer"
               className="nav-link"
             >
-              <img src={whatsappIcon} alt="Whatsapp" />
+              <FaWhatsapp/>
             </a>
             <div className="underline"/>
          </li>

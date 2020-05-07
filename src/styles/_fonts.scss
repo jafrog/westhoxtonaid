@@ -1,21 +1,21 @@
 @font-face {
-   font-family: 'DINNextLTPro-Black';
-      src: url('../fonts/DINNextLTPro/DINNextLTPro-Black.eot');
-      src: url('../fonts/DINNextLTPro/DINNextLTPro-Black.eot?#iefix') format('embedded-opentype'),
-           url('../fonts/DINNextLTPro/DINNextLTPro-Black.woff') format('woff'),
-           url('../fonts/DINNextLTPro/DINNextLTPro-Black.woff2') format('woff2'),
-           url('../fonts/DINNextLTPro/DINNextLTPro-Black.ttf') format('truetype');
-   font-weight: normal;
-   font-style: normal;
-};
-
-@font-face {
    font-family: 'DINNextLTPro-Bold';
       src: url('../fonts/DINNextLTPro/DINNextLTPro-Bold.eot');
       src: url('../fonts/DINNextLTPro/DINNextLTPro-Bold.eot?#iefix') format('embedded-opentype'),
            url('../fonts/DINNextLTPro/DINNextLTPro-Bold.woff') format('woff'),
            url('../fonts/DINNextLTPro/DINNextLTPro-Bold.woff2') format('woff2'),
            url('../fonts/DINNextLTPro/DINNextLTPro-Bold.ttf') format('truetype');
+   font-weight: normal;
+   font-style: normal;
+};
+
+@font-face {
+   font-family: 'DINNextLTPro-BoldCondensed';
+      src: url('../fonts/DINNextLTPro/DINNextLTPro-BoldCondensed.eot');
+      src: url('../fonts/DINNextLTPro/DINNextLTPro-BoldCondensed.eot?#iefix') format('embedded-opentype'),
+           url('../fonts/DINNextLTPro/DINNextLTPro-BoldCondensed.woff') format('woff'),
+           url('../fonts/DINNextLTPro/DINNextLTPro-BoldCondensed.woff2') format('woff2'),
+           url('../fonts/DINNextLTPro/DINNextLTPro-BoldCondensed.ttf') format('truetype');
    font-weight: normal;
    font-style: normal;
 };
