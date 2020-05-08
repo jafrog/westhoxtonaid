@@ -1,5 +1,6 @@
 @import "custom";
 @import "fonts";
+@import "index"
 @import "~bootstrap/scss/bootstrap";
 
 /* Typography */
@@ -87,10 +88,11 @@ h6 {
 
 a {
   font-size: 20px;
-  font-weight: bold;
-  font-family: $font-family-condensed;
+  font-family: $font-family-bold-condensed;
   line-height: 22px;
   color: $pink;
+  text-transform: uppercase;
+  text-decoration: underline;
 
   &.light {
     color: $yellow-grey-light;
@@ -125,6 +127,8 @@ small {
   font-family: $font-family-sans-serif;
   font-size: 18px;
   line-height: 20px;
+  text-decoration: none;
+  text-transform: none;
 
   &:hover {
     color: $pink;
@@ -170,36 +174,6 @@ small {
 
 /* ========== */
 
-.wrapper {
-  background:
-    linear-gradient(hsla(0,100,86, 0.5), hsla(0,100,86, 0.5));
-  background-size:
-    100% 80vh;
-  background-repeat: no-repeat;
-
-  &.index {
-    background:
-      linear-gradient(hsla(0,100,86, 0.5), hsla(0,100,86, 0.5));
-    background-size:
-      100% 80vh;
-    background-repeat: no-repeat;
-  }
-
-  &.index::after {
-    content: "";
-    background: url("../assets/index_background.png");
-    background-size: 100% auto;
-    background-repeat: no-repeat;
-    opacity: 0.8;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    position: absolute;
-    z-index: -1;
-  }
-}
-
 /* Footer */
 /* ========== */
 
@@ -215,6 +189,7 @@ footer .footer-content {
 footer .contact-link {
   text-decoration: underline;
   text-decoration-color: $yellow-grey-light;
+  text-transform: none;
 
   &:hover {
     text-decoration-color: $pink;
@@ -240,20 +215,58 @@ footer .social a {
 
 /* ========== */
 
-.card-title {
-  color: $gray-900;
+/* Buttons */
+/* ========== */
+
+.btn {
+  text-transform: uppercase;
+  letter-spacing: 0.07px;
+  text-decoration: underline;
+  text-underline-position: under;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+
+  &:hover {
+    text-decoration: underline;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  }
 }
 
-.map {
-  min-height: 400px;
+.btn.btn-lg {
+  width: 380px;
+  height: 90px;
+}
+
+.btn.light {
+  color: $yellow-grey-light;
+}
+
+.btn.btn-primary {
+  &:hover {
+    background-color: $pink;
+    border-color: $pink;
+  }
+}
+
+.btn.btn-secondary {
+  &:hover {
+    background-color: $purple-darkest;
+    border-color: $purple-darkest;
+  }
+}
+
+/* ========== */
+
+.card-title {
+  color: $gray-900;
 }
 
 .contact-card {
   min-width: 400px;
   width: 450px;
 }
-
-
 
 .contact-card-title {
   font-size: 1.25rem;

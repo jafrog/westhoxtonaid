@@ -82,6 +82,16 @@ const Footer = () => (
           <Col xs={12}>
             <small className="light">
               © 2020 West Hoxton Mutual Aid.
+              Made by&nbsp;
+              <a
+                href="https://twitter.com/jafrog"
+                target="_blank" rel="noopener noreferrer"
+                className="contact-link"
+              >
+                <small className="light">
+                  Jafrog
+                </small>
+              </a>
             </small>
           </Col>
         </Row>

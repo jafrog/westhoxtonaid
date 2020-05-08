@@ -16,9 +16,7 @@ const Layout = ({ location, children }) => {
     <div className={`wrapper ${page}`}>
       <Header/>
       <main style={{ minHeight: "100vh" }}>
-        <div className="container">
-          {children}
-        </div>
+        {children}
       </main>
       <Footer />
     </div>

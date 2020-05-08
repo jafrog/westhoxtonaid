@@ -32,12 +32,11 @@ $grey-light: #E6E6E6;
 
 $theme-colors: (
   "primary": $pink,
-  "secondary": $purple,
+  "secondary": $purple-darkest,
   "light": $grey-light,
   "dark": $grey-dark,
 );
 
-$body-bg: $grey-light;
 $body-color: $grey-dark;
 
 $headings-margin-bottom: $spacer * 3;
@@ -54,5 +53,18 @@ $navbar-nav-link-padding-x: 1rem;
 
 $navbar-dark-color: $grey-dark;
 $navbar-dark-active-color: $grey-dark;
+
+/* ====== */
+
+/* Buttons */
+/* ====== */
+
+$btn-font-family: $font-family-bold-condensed;
+$btn-border-radius: 0;
+/* Large */
+
+$btn-font-size-lg: 36px;
+$btn-line-height-lg: 22px;
+$btn-border-radius-lg: 0;
 
 /* ====== */
