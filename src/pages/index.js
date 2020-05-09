@@ -176,7 +176,7 @@ const IndexPage = ({ path }) => {
       </section>
 
       <Row className="mt-5">
-        <Col xs={12}>
+        <Col xs={10} className="offset-1">
           <h2>Contact us</h2>
         </Col>
       </Row>
